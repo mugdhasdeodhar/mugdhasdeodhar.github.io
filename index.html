@@ -39,9 +39,26 @@ font-weight: 400;
 }
 
 section {
-padding: 100px 60px;
+padding: 110px 80px;
 }
 
+section h2 {
+font-size: 32px;
+margin-bottom: 30px;
+font-weight: 600;
+position: relative;
+}
+
+section h2::after {
+content: "";
+width: 50px;
+height: 3px;
+background-color: #00adb5;
+position: absolute;
+bottom: -10px;
+left: 0;
+}
+  
 .hero {
 height: 100vh;
 background: linear-gradient(to right, #141e30, #243b55);
@@ -112,6 +129,16 @@ transition: background-color 0.3s ease;
 background-color: #01949a;
 }
 
+.card h3 {
+font-size: 20px;
+margin-bottom: 10px;
+font-weight: 600;
+}
+
+.card p {
+margin-bottom: 10px;
+line-height: 1.6;
+}
   
 footer {
 text-align: center;
