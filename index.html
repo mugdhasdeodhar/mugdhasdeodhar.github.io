@@ -63,7 +63,7 @@ section h2::after {
   
 .hero {
 height: 100vh;
-background: linear-gradient(to right, #141e30, #243b55);
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 color: white;
 display: flex;
 flex-direction: column;
@@ -73,7 +73,51 @@ justify-content: center;
 .hero h1 {
 font-size: 48px;
 }
+.hero {
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 1100px;
+}
 
+.hero-title {
+font-size: 56px;
+font-weight: 700;
+line-height: 1.2;
+margin-bottom: 20px;
+}
+
+.hero-highlight {
+color: #00adb5;
+}
+
+.hero-subtitle {
+font-size: 20px;
+margin-bottom: 18px;
+opacity: 0.95;
+max-width: 750px;
+}
+
+.hero-tools {
+font-size: 16px;
+letter-spacing: 1px;
+margin-bottom: 30px;
+color: #d0d7de;
+}
+
+.btn {
+padding: 14px 26px;
+font-size: 16px;
+font-weight: 500;
+border-radius: 8px;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
+}
+    
 .btn {
 display: inline-block;
 margin-top: 20px;
@@ -165,7 +209,14 @@ color: white;
 
 <section class="hero">
 
-<h1>Data Analyst – Healthcare & Logistics Analytics</h1>
+<h1 class="hero-title">
+Data Analyst<br>
+<span class="hero-highlight">Healthcare & Logistics Analytics</span>
+</h1>
+
+.hero-highlight {
+color: #00adb5;
+}
 
 <p class="hero-subtitle">
 Turning operational data into actionable insights that drive performance improvement.
