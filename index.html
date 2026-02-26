@@ -31,6 +31,135 @@ color: white;
 z-index: 1000;
 }
 
+#about p {
+max-width: 900px;
+margin-bottom: 18px;
+line-height: 1.7;
+font-size: 16px;
+}
+
+.core-title {
+margin-top: 30px;
+font-size: 20px;
+font-weight: 600;
+}
+
+.core-strengths {
+margin-top: 15px;
+padding-left: 18px;
+max-width: 900px;
+}
+
+.core-strengths li {
+margin-bottom: 8px;
+line-height: 1.6;
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+
+.skill-category {
+background: #ffffff;
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+font-size: 18px;
+margin-bottom: 10px;
+color: #00adb5;
+}
+
+.skill-category p {
+line-height: 1.6;
+}
+
+#experience {
+background: #f8f9fa;
+}
+
+.timeline {
+position: relative;
+margin-top: 40px;
+padding-left: 30px;
+border-left: 3px solid #00adb5;
+}
+
+.timeline-item {
+margin-bottom: 40px;
+position: relative;
+}
+
+.timeline-item::before {
+content: "";
+position: absolute;
+left: -12px;
+top: 5px;
+width: 15px;
+height: 15px;
+background: #00adb5;
+border-radius: 50%;
+}
+
+.timeline-item h3 {
+margin-bottom: 6px;
+font-size: 18px;
+}
+
+.timeline-date {
+font-size: 14px;
+color: #777;
+display: block;
+margin-bottom: 8px;
+}
+
+.timeline-item p {
+max-width: 900px;
+line-height: 1.6;
+}
+
+#education {
+background: #ffffff;
+}
+
+.certificate-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+
+.certificate-item {
+text-align: center;
+}
+
+.certificate-item img {
+width: 100%;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+transition: transform 0.3s ease;
+}
+
+.certificate-item img:hover {
+transform: scale(1.03);
+}
+
+.certificate-item p {
+margin-top: 10px;
+font-size: 14px;
+}
+
 nav a {
 color: white;
 margin-left: 20px;
@@ -290,29 +419,105 @@ View Resume
     
 <section id="about">
 <h2>About Me</h2>
-<p>
-Data Analyst with 9+ years of experience delivering analytics solutions across healthcare and supply chain/logistics environments. Strong expertise in SQL, Excel, Power BI, and Python, with a focus on KPI reporting, dashboard development, and data-driven operational improvement.
-</p>
-<p>
-Experienced in translating complex datasets into actionable insights for leadership teams, improving inventory visibility, shipment performance, and reporting efficiency. Successfully contributed to process improvements resulting in measurable operational gains, including a 15% improvement in supply chain performance.
-</p>
-<p>
-Seeking a remote Data Analyst role where I can leverage advanced analytical skills, business understanding, and strong communication to support data-informed decision-making.
-</p>
-</section>
 
+<p>
+I am a Data Analyst with over 9 years of experience delivering analytics solutions across healthcare and logistics environments. My work focuses on transforming complex operational data into clear, decision-ready insights that improve efficiency, visibility, and performance outcomes.
+</p>
+
+<p>
+In healthcare analytics, I have developed KPI dashboards analyzing hospital readmissions, length of stay, and cost drivers to support data-driven clinical and operational decisions. In logistics and supply chain analytics, I have evaluated on-time delivery, inventory risk, and shipping efficiency — contributing to measurable improvements including a 15% increase in supply chain performance.
+</p>
+
+<p>
+I specialize in SQL, Excel, Power BI, and Python, with strong experience in dashboard development, data cleaning, and stakeholder reporting. I work effectively with cross-functional teams to translate analytical findings into actionable business strategies.
+</p>
+
+<p>
+Currently open to remote Data Analyst opportunities (Canada time zones), where I can contribute advanced analytics expertise, domain knowledge, and a results-oriented mindset.
+</p>
+
+<h3 class="core-title">Core Strengths</h3>
+
+<ul class="core-strengths">
+<li>KPI Dashboard Development & Executive Reporting</li>
+<li>Healthcare & Supply Chain Performance Analytics</li>
+<li>SQL-Based Data Extraction & Business Querying</li>
+<li>Data Cleaning, Validation & Quality Improvement</li>
+<li>Cross-Functional Stakeholder Communication</li>
+</ul>
+    
+</section>
+    
 <section id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<span>SQL</span>
-<span>Excel</span>
-<span>Power BI</span>
-<span>Python</span>
-<span>Data Cleaning</span>
-<span>Dashboarding</span>
+<h2>Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-category">
+<h3>Programming & Querying</h3>
+<p>SQL, Python (Pandas)</p>
+</div>
+
+<div class="skill-category">
+<h3>Data Visualization</h3>
+<p>Power BI, Dashboard Design, KPI Reporting</p>
+</div>
+
+<div class="skill-category">
+<h3>Data Analysis</h3>
+<p>Data Cleaning, Exploratory Analysis, Performance Metrics</p>
+</div>
+
+<div class="skill-category">
+<h3>Tools & Platforms</h3>
+<p>Excel (Advanced), GitHub, Jupyter Notebook</p>
+</div>
+
 </div>
 </section>
 
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Data Analyst – Logistics & Supply Chain</h3>
+<span class="timeline-date">Recent Role</span>
+<p>
+Analyzed shipment, inventory, and operational datasets to improve on-time delivery performance and inventory visibility. Built Power BI dashboards and SQL-based reports contributing to a 15% improvement in supply chain performance.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Business Data Analyst – Healthcare</h3>
+<span class="timeline-date">Previous Role</span>
+<p>
+Developed KPI dashboards analyzing hospital readmissions, cost drivers, and operational performance metrics. Automated recurring reporting workflows using SQL and Excel to improve leadership visibility and reporting efficiency.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="education">
+<h2>Education & Certifications</h2>
+
+<div class="certificate-grid">
+
+<div class="certificate-item">
+<img src="certificates/supply-chain-diploma.jpg" alt="Supply Chain Diploma">
+<p>Post Graduate Diploma – Supply Chain Management</p>
+</div>
+
+<div class="certificate-item">
+<img src="certificates/data-analytics-certificate.jpg" alt="Data Analytics Certificate">
+<p>Data Analytics Certification</p>
+</div>
+
+</div>
+</section>
+    
 <section id="projects">
 <h2>Projects</h2>
 
@@ -322,6 +527,10 @@ Seeking a remote Data Analyst role where I can leverage advanced analytical skil
 <h3>Healthcare Readmissions Dashboard</h3>
 <p><strong>Tools:</strong> SQL, Power BI</p>
 
+<p class="project-summary">
+Operational analytics dashboard supporting hospital readmission reduction strategy.
+</p>
+    
 <ul class="project-highlights">
 <li>Analyzed hospital readmission trends and length of stay using SQL queries</li>
 <li>Developed interactive Power BI dashboards to track KPIs and cost drivers, improving leadership visibility into hospital performance trends</li>
@@ -331,9 +540,6 @@ Seeking a remote Data Analyst role where I can leverage advanced analytical skil
 <a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank">
 View Project on GitHub
 </a>
-<p class="project-summary">
-Operational analytics dashboard supporting hospital readmission reduction strategy.
-</p>
     
 </div>
 
@@ -342,6 +548,10 @@ Operational analytics dashboard supporting hospital readmission reduction strate
 <h3>Logistics On-Time Delivery & Inventory Analysis</h3>
 <p><strong>Tools:</strong> Power BI, SQL</p>
 
+<p class="project-summary">
+Operational analytics dashboard supporting logistics on-time delivery strategy.
+</p>
+    
 <ul class="project-highlights">
 <li>Evaluated on-time delivery performance and inventory risk using SQL</li>
 <li>Built Power BI dashboards to monitor shipping efficiency and supply chain KPIs</li>
@@ -351,9 +561,7 @@ Operational analytics dashboard supporting hospital readmission reduction strate
 <a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI" target="_blank">
 View Project on GitHub
 </a>
-<p class="project-summary">
-Operational analytics dashboard supporting logistics on-time delivery strategy.
-</p>
+
 </div>
 
 
@@ -361,6 +569,10 @@ Operational analytics dashboard supporting logistics on-time delivery strategy.
 <h3>Python Healthcare Data Cleaning</h3>
 <p><strong>Tools:</strong> Python, Pandas</p>
 
+<p class="project-summary">
+Operational data quality framework supporting healthcare analytics reliability.
+</p>
+    
 <ul class="project-highlights">
 <li>Cleaned and validated healthcare datasets using Python and Pandas</li>
 <li>Handled missing values, inconsistent formats, and data anomalies</li>
@@ -370,9 +582,7 @@ Operational analytics dashboard supporting logistics on-time delivery strategy.
 <a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning" target="_blank">
 View Project on GitHub
 </a>
-<p class="project-summary">
-Operational analytics dashboard supporting python healthcare data cleaning strategy.
-</p>
+
 </div>
 
 </div>
