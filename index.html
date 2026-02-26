@@ -39,18 +39,17 @@ font-weight: 400;
 }
 
 .project-highlights {
-margin: 10px 0 5px 15px;
-padding-left: 15px;
+margin: 15px 0;
+padding-left: 18px;
 }
 
 .project-highlights li {
-margin-bottom: 6px;
-line-height: 1.5;
-font-size: 14px;
+margin-bottom: 8px;
+line-height: 1.6;
 }
     
 section {
-padding: 110px 80px;
+padding: 110px 80px;    
 }
 
 section h2 {
@@ -206,7 +205,41 @@ font-weight: 600;
 margin-bottom: 10px;
 line-height: 1.6;
 }
-  
+
+.metrics {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 30px;
+padding: 60px 80px;
+background: #f8f9fa;
+text-align: center;
+}
+
+.metric-box {
+background: white;
+padding: 30px 20px;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+transition: all 0.3s ease;
+}
+
+.metric-box:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.metric-box h3 {
+font-size: 36px;
+color: #00adb5;
+margin-bottom: 10px;
+}
+
+.metric-box p {
+font-size: 14px;
+font-weight: 500;
+color: #444;
+}
+    
 footer {
 text-align: center;
 padding: 20px;
@@ -291,13 +324,17 @@ Seeking a remote Data Analyst role where I can leverage advanced analytical skil
 
 <ul class="project-highlights">
 <li>Analyzed hospital readmission trends and length of stay using SQL queries</li>
-<li>Developed interactive Power BI dashboards to track KPIs and cost drivers</li>
+<li>Developed interactive Power BI dashboards to track KPIs and cost drivers, improving leadership visibility into hospital performance trends</li>
 <li>Enabled data-driven operational and clinical decision-making</li>
 </ul>
 
 <a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank">
 View Project on GitHub
 </a>
+<p class="project-summary">
+Operational analytics dashboard supporting hospital readmission reduction strategy.
+</p>
+    
 </div>
 
 
@@ -314,6 +351,9 @@ View Project on GitHub
 <a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI" target="_blank">
 View Project on GitHub
 </a>
+<p class="project-summary">
+Operational analytics dashboard supporting logistics on-time delivery strategy.
+</p>
 </div>
 
 
@@ -330,6 +370,9 @@ View Project on GitHub
 <a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning" target="_blank">
 View Project on GitHub
 </a>
+<p class="project-summary">
+Operational analytics dashboard supporting python healthcare data cleaning strategy.
+</p>
 </div>
 
 </div>
@@ -337,7 +380,29 @@ View Project on GitHub
 
 </div>
 </section>
+<section class="metrics">
 
+<div class="metric-box">
+<h3>9+</h3>
+<p>Years of Analytics Experience</p>
+</div>
+
+<div class="metric-box">
+<h3>15%</h3>
+<p>Supply Chain Performance Improvement</p>
+</div>
+
+<div class="metric-box">
+<h3>3+</h3>
+<p>End-to-End Analytics Dashboards Built</p>
+</div>
+
+<div class="metric-box">
+<h3>Healthcare & Logistics</h3>
+<p>Domain Specialization</p>
+</div>
+
+</section>
 <section id="contact">
 <h2>Contact</h2>
 
