@@ -86,7 +86,17 @@ color: #00adb5;
 .skill-category p {
 line-height: 1.6;
 }
+.hero-text h1 {
+  color: #111;   /* Dark text */
+}
 
+.hero-text h2 {
+  color: #333;
+}
+
+.hero-text p {
+  color: #444;
+}
 #experience {
 background: #f8f9fa;
 }
@@ -330,10 +340,11 @@ box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
   gap: 60px;
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+/*.hero-text h1 {
+  font-size: 52px;
   font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
 }
 
 .hero-text h2 {
@@ -341,7 +352,7 @@ box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
   font-weight: 500;
   margin-bottom: 20px;
   color: #555;
-}
+}*/
 
 .hero-text p {
   font-size: 18px;
@@ -486,8 +497,12 @@ margin-top: 20px;
 @media (max-width: 768px) {
 
   .hero-container {
-    flex-direction: column;
-    text-align: center;
+    max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
   }
 
   .hero-text h1 {
@@ -507,6 +522,17 @@ margin-top: 20px;
     justify-content: center;
   }
 }   
+.btn-primary {
+  background-color: #1e40af;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #1e40af;
+}
+    
 footer {
 text-align: center;
 padding: 20px;
