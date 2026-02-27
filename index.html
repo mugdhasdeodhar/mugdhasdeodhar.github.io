@@ -4,597 +4,298 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mugdha Deodhar | Data Analyst</title>
-<meta name="description" content="Mugdha Deodhar - Data Analyst specializing in Healthcare and Logistics Analytics. Expert in SQL, Power BI, Excel, and Python.">
-<meta name="keywords" content="Data Analyst, Healthcare Analytics, Logistics Analytics, SQL, Power BI, Excel, Python">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Data Analyst specializing in Healthcare and Supply Chain Analytics. SQL, Power BI, Excel, Python.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-scroll-behavior: smooth;
-color: #333;
+  color: #1e293b;
+  scroll-behavior: smooth;
+  background: #ffffff;
 }
 
-header {
-position: fixed;
-width: 100%;
-background: #111;
-padding: 20px 60px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: white;
-z-index: 1000;
+section {
+  padding: 100px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-#about p {
-max-width: 900px;
-margin-bottom: 18px;
-line-height: 1.7;
-font-size: 16px;
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #1e40af;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
 }
 
 /* ============================= */
-/* NAVIGATION BAR */
+/* NAVBAR */
 /* ============================= */
 
 .navbar {
-.core-title {
-margin-top: 30px;
-font-size: 20px;
-font-weight: 600;
+  background: #000;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.core-strengths {
-margin-top: 15px;
-padding-left: 18px;
-max-width: 900px;
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
 
-.core-strengths li {
-margin-bottom: 8px;
-line-height: 1.6;
+.logo {
+  flex: 1;
 }
 
-.skills-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-margin-top: 30px;
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.skill-category {
-background: #ffffff;
-padding: 25px;
-border-radius: 12px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-transition: all 0.3s ease;
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
 }
 
-.skill-category:hover {
-transform: translateY(-5px);
-box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-.skill-category h3 {
-font-size: 18px;
-margin-bottom: 10px;
-color: #00adb5;
+.nav-links a:hover {
+  color: #3b82f6;
 }
 
-.skill-category p {
-line-height: 1.6;
+.nav-social {
+  display: flex;
+  gap: 18px;
+  margin-left: 25px;
 }
 
-.highlight {
-  display: block;
-}
-  
-.hero-text h1 {
-  color: #111;   /* Dark text */
+.nav-social img {
+  width: 20px;
+  filter: invert(1);
+  transition: 0.3s;
 }
 
-.hero-text h2 {
-  color: #333;
-}
-
-.hero-text h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #1e40af;
-  margin-top: 14px;
-  border-radius: 2px;
-}
-.hero-text p {
-  color: #444;
-}
-#experience {
-background: #f8f9fa;
-}
-
-.timeline {
-position: relative;
-margin-top: 40px;
-padding-left: 60px;
-border-left: 3px solid #00adb5;
-}
-
-.timeline-item {
-margin-bottom: 40px;
-position: relative;
-}
-
-.timeline-item {
-padding: 10px 15px;
-border-radius: 8px;
-transition: background 0.3s ease;
-}
-
-.timeline-item:hover {
-background: rgba(0, 173, 181, 0.05);
-}
-    
-.timeline-item::before {
-content: "";
-position: absolute;
-left: -33px;   /* aligns dot perfectly on line */
-top: 6px;
-width: 14px;
-height: 14px;
-background: #00adb5;
-border-radius: 50%;
-}
-
-.timeline-item h3 {
-margin-bottom: 6px;
-font-size: 18px;
-}
-
-.timeline-date {
-font-size: 14px;
-color: #777;
-display: block;
-margin-bottom: 8px;
-}
-
-.timeline-item p {
-max-width: 900px;
-line-height: 1.6;
-}
-
-#education {
-background: #ffffff;
-}
-
-.certificate-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-margin-top: 30px;
-}
-
-.certificate-item {
-text-align: center;
-}
-    
-.certificate-item a {
-display: block;
-}
-    
-.certificate-item img {
-width: 100%;
-border-radius: 12px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-transition: transform 0.3s ease;
-}
-
-.certificate-item img:hover {
-transform: scale(1.05);
-cursor: pointer;
-}
-    
-.certificate-item p {
-margin-top: 10px;
-font-size: 14px;
-}
-
-nav a {
-color: white;
-margin-left: 20px;
-text-decoration: none;
-font-weight: 400;
-}
-
-.project-highlights {
-margin: 15px 0;
-padding-left: 18px;
-}
-
-.project-highlights li {
-margin-bottom: 8px;
-line-height: 1.6;
-}
-
-.project-image {
-width: 100%;
-border-radius: 10px;
-margin-bottom: 15px;
-}
-    
-section {
-padding: 110px 80px;
-max-width: 1200px;
-margin: 0 auto;
-}
-section {
-  padding: 80px 20px;
-}
-section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-weight: 600;
-    position: relative;
-    display: inline-block;
-}
-h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-section h2::after {
-    content: "";
-    width: 70px;
-    height: 3px;
-    background-color: #00adb5;
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    border-radius: 2px;
-}
-  
-.hero {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-padding: 120px 80px;
-max-width: 1200px;
-margin: 0 auto;
-background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-color: white;
-}
-
-.hero h1 {
-font-size: 48px;
-}
-
-.hero-title {
-font-size: 56px;
-font-weight: 700;
-line-height: 1.2;
-margin-bottom: 20px;
-}
-
-.hero-highlight {
-color: #00adb5;
-}
-
-.hero-subtitle {
-font-size: 20px;
-margin-bottom: 18px;
-opacity: 0.95;
-max-width: 750px;
-}
-
-.hero-tools {
-font-size: 16px;
-letter-spacing: 1px;
-margin-bottom: 30px;
-color: #d0d7de;
-
-<p style="margin-top:10px; font-size:14px; opacity:0.85;">
-Experienced in cross-timezone collaboration and remote reporting environments.
-</p>
-    
-}
-
-.hero-credibility {
-margin-bottom: 25px;
-display: flex;
-flex-direction: column;
-gap: 12px;
-font-size: 15px;
-font-weight: 500;
-}
-
-.hero-credibility span {
-background: rgba(0, 173, 181, 0.25);
-padding: 8px 14px;
-border-radius: 25px;
-color: white;
-width: fit-content;
-}
-    
-.btn {
-display: inline-block;
-margin-top: 20px;
-padding: 14px 26px;
-background: #00adb5;
-color: white;
-text-decoration: none;
-border-radius: 8px;
-font-size: 16px;
-font-weight: 500;
-transition: all 0.3s ease;
-}
-
-.btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
+.nav-social img:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 /* ============================= */
-/* HERO SECTION - FINAL POLISH */
+/* HERO */
 /* ============================= */
 
 .hero {
-  padding: 170px 20px 160px;
+  padding: 150px 20px 140px;
   background: #f4f6fb;
 }
 
 .hero-container {
-  max-width: 1180px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 90px;
-}
-
-/* TEXT COLUMN */
-
-.hero-text {
-  flex: 1;
+  gap: 80px;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 58px;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 28px;
-  color: #0f172a;
-  letter-spacing: -0.5px;
+  margin-bottom: 25px;
 }
 
 .hero-text h2 {
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   color: #334155;
-  max-width: 620px;
 }
 
 .hero-text p {
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 1.7;
+  margin-bottom: 40px;
   max-width: 600px;
-  margin-bottom: 45px;
   color: #475569;
 }
 
-/* BUTTONS */
-
 .hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 18px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn-primary {
-  padding: 15px 30px;
-  background-color: #1e40af;
-  color: #ffffff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  background: #1e40af;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #162e8c;
+  background: #162e8c;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  padding: 15px 30px;
   border: 2px solid #1e40af;
   color: #1e40af;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #1e40af;
-  color: #ffffff;
+  background: #1e40af;
+  color: #fff;
   transform: translateY(-2px);
 }
 
-/* IMAGE COLUMN */
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
 .hero-image img {
-  width: 320px;
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
+/* ============================= */
+/* CARDS (Projects, Skills, Metrics) */
+/* ============================= */
+
+.skills-grid,
+.projects,
+.metrics {
+  display: grid;
+  gap: 30px;
+}
+
+.skills-grid,
+.projects {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.metrics {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.card,
+.skill-category,
+.metric-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover,
+.skill-category:hover,
+.metric-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+/* ============================= */
+/* CERTIFICATES */
+/* ============================= */
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.certificate-item img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.certificate-item img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ============================= */
 /* RESPONSIVE */
+/* ============================= */
 
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 50px;
-  }
-
-  .hero-text h1 {
-    font-size: 44px;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
   }
 
   .hero-buttons {
     justify-content: center;
   }
-
-  .hero-image img {
-    width: 280px;
-  }
-}
-    
-.skills span {
-display: inline-block;
-background: #eee;
-padding: 8px 15px;
-margin: 5px;
-border-radius: 20px;
 }
 
-.projects {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 30px;
-margin-top: 30px;
-}
-
-.card {
-background: #ffffff;
-padding: 25px;
-border-radius: 14px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-transition: all 0.3s ease;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-
-.card:hover {
-transform: translateY(-10px);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-}
-
-.card a {
-margin-top: 15px;
-display: inline-block;
-padding: 8px 14px;
-background-color: #00adb5;
-color: white;
-text-decoration: none;
-border-radius: 6px;
-font-size: 14px;
-transition: background-color 0.3s ease;
-}
-
-.card a:hover {
-background-color: #01949a;
-}
-
-.card h3 {
-font-size: 20px;
-margin-bottom: 10px;
-font-weight: 600;
-}
-
-.card p {
-margin-bottom: 10px;
-line-height: 1.6;
-}
-
-.metrics {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 30px;
-padding: 60px 80px;
-background: #f8f9fa;
-text-align: center;
-}
-
-.metric-box {
-background: white;
-padding: 30px 20px;
-border-radius: 12px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-transition: all 0.3s ease;
-}
-
-.metric-box:hover {
-transform: translateY(-6px);
-box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-}
-
-.metric-box h3 {
-font-size: 36px;
-color: #00adb5;
-margin-bottom: 10px;
-}
-
-.metric-box p {
-font-size: 14px;
-font-weight: 500;
-color: #444;
-}
-
-.contact-buttons {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-margin-top: 20px;
-}
-
-footer {
-text-align: center;
-padding: 20px;
-background: #111;
-color: white;
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h2>Mugdha Deodhar</h2>
 <nav class="navbar">
   <div class="nav-container">
-
     <div class="logo">
       <a href="#">Mugdha Deodhar</a>
     </div>
-
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -602,329 +303,35 @@ color: white;
       <li><a href="#certificates">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-
     <div class="nav-social">
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      <a href="https://linkedin.com/in/mugdha-deodhar" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
       </a>
-      <a href="https://github.com/YOUR-GITHUB" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      <a href="https://github.com/mugdhasdeodhar" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
       </a>
     </div>
-
   </div>
 </nav>
 
-</header>
-
 <section class="hero">
   <div class="hero-container">
-
-    <div class="hero-text">
-      <h1>
-        Hi, I'm <span class="highlight">Mugdha Deodhar</span>
-      </h1>
-      <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
-      <p>
-        I transform operational data into actionable insights that improve
-        performance, efficiency, and decision-making.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-secondary">Contact Me</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="Mugdha_Profile.jpg" alt="Mugdha Deodhar">
-    </div>
-
-  </div>
-</section><section class="hero">
-  <div class="hero-container">
-
     <div class="hero-text">
       <h1>Hi, I'm Mugdha Deodhar</h1>
       <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
-
       <p>
-        I transform operational data into actionable insights that improve 
-        performance, efficiency, and decision-making.
+        I transform operational data into actionable insights that improve performance,
+        efficiency, and decision-making.
       </p>
-
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-secondary">Contact Me</a>
       </div>
     </div>
-
-    <!-- Leave this here. Upload image later. -->
     <div class="hero-image">
       <img src="Mugdha_Profile.jpg" alt="Mugdha Deodhar">
     </div>
-
   </div>
-</section>
-    
-<section id="about">
-<h2>About Me</h2>
-
-<p>
-I am a Data Analyst with over 9 years of experience delivering analytics solutions across healthcare and logistics environments. My work focuses on transforming complex operational data into clear, decision-ready insights that improve efficiency, visibility, and performance outcomes.
-</p>
-
-<p>
-In healthcare analytics, I have developed KPI dashboards analyzing hospital readmissions, length of stay, and cost drivers to support data-driven clinical and operational decisions. In logistics and supply chain analytics, I have evaluated on-time delivery, inventory risk, and shipping efficiency — contributing to measurable improvements including a 15% increase in supply chain performance.
-</p>
-
-<p>
-I specialize in SQL, Excel, Power BI, and Python, with strong experience in dashboard development, data cleaning, and stakeholder reporting. I work effectively with cross-functional teams to translate analytical findings into actionable business strategies.
-</p>
-
-<p>
-Currently open to remote Data Analyst opportunities (Canada time zones), where I can contribute advanced analytics expertise, domain knowledge, and a results-oriented mindset.
-</p>
-
-<h3 class="core-title">Core Strengths</h3>
-
-<ul class="core-strengths">
-<li>KPI Dashboard Development & Executive Reporting</li>
-<li>Healthcare & Supply Chain Performance Analytics</li>
-<li>SQL-Based Data Extraction & Business Querying</li>
-<li>Data Cleaning, Validation & Quality Improvement</li>
-<li>Cross-Functional Stakeholder Communication</li>
-</ul>
-    
-</section>
-    
-<section id="skills">
-<h2>Technical Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill-category">
-<h3>Programming & Querying</h3>
-<p>SQL, Python (Pandas)</p>
-</div>
-
-<div class="skill-category">
-<h3>Data Visualization</h3>
-<p>Power BI, Dashboard Design, KPI Reporting</p>
-</div>
-
-<div class="skill-category">
-<h3>Data Analysis</h3>
-<p>Data Cleaning, Exploratory Analysis, Performance Metrics</p>
-</div>
-
-<div class="skill-category">
-<h3>Tools & Platforms</h3>
-<p>Excel (Advanced), GitHub, Jupyter Notebook</p>
-</div>
-
-</div>
-</section>
-
-<section id="experience">
-<h2>Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Data Analyst – Logistics & Supply Chain</h3>
-<span class="timeline-date">2016 – 2021 | National Logistics Services </span>
-<p>
-Analyzed shipment, inventory, and operational datasets to improve on-time delivery performance and inventory visibility. Built Power BI dashboards and SQL-based reports contributing to a 15% improvement in supply chain performance.
-</p>
-</div>
-
-<div class="timeline-item">
-<h3>Business Data Analyst – Healthcare</h3>
-<span class="timeline-date">2010 - 2014 | Poona Hospital & Research Center </span>
-<p>
-Developed KPI dashboards analyzing hospital readmissions, cost drivers, and operational performance metrics. Automated recurring reporting workflows using SQL and Excel to improve leadership visibility and reporting efficiency.
-</p>
-</div>
-
-</div>
-</section>
-<section id="certificates">
-
-
- </section> 
-  
-<section id="education">
-<h2>Education & Certifications</h2>
-
-<div class="certificate-grid">
-
-<div class="certificate-item">
-<a href="BSc_Microbiology_Convocation_Certificate.jpg" target="_blank">
-<img src="BSc_Microbiology_Convocation_Certificate.jpg" alt="BSC Certificate">
-</a>
-<p>Bachelor of Science – Microbiology</p>
-</div>
-
-<div class="certificate-item">
-<a href="DCM_Convocation_Certificate.jpg" target="_blank">
-<img src="DCM_Convocation_Certificate.jpg" alt="DCM Certificate">
-</a>
-<p>Diploma in Computer Management</p>
-</div>
-    
-<div class="certificate-item">
-<a href="MCM_Convocation_Certificate.jpg" target="_blank">
-<img src="MCM_Convocation_Certificate.jpg" alt="MCM Certificate">
-</a>
-<p>Master's in Computer Management</p>
-</div>
-    
-<div class="certificate-item">
-<a href="PHRC_Experience_Letter.jpg" target="_blank">
-<img src="PHRC_Experience_Letter.jpg" alt="Poona Hospital Work Experience Certificate">
-</a>
-<p>Poona Hospital & Research Center Work Experience Certificate</p>
-</div>
-    
-<div class="certificate-item">
-<a href="CDICertificate-SupplyChainManagement-Mugdha.jpg" target="_blank">
-<img src="CDICertificate-SupplyChainManagement-Mugdha.jpg" alt="Supply Chain Diploma Certificate">
-</a>
-<p>Post Graduate Diploma – Supply Chain Management</p>
-</div>
-
-<div class="certificate-item">
-<a href="SunviewCertificate-DiplomaInSystemsTestingEngineering-Mugdha.jpg" target="_blank">
-<img src="SunviewCertificate-DiplomaInSystemsTestingEngineering-Mugdha.jpg" alt="Diploma In Systems Testing Engineering Certificate">
-</a>
-<p>Post Graduate Diploma In Systems Testing Engineering</p>
-</div>
-
-<div class="certificate-item">
-<a href="data-analytics-bootcamp.jpg" target="_blank">
-<img src="data-analytics-bootcamp.jpg" alt="Data Analytics Bootcamp Certificate">
-</a>
-<p>Data Analytics Bootcamp Certification Completion</p>
-</div>
-
-<div class="certificate-item">
-<a href="career-skills-data-analytics.jpg" target="_blank">
-<img src="career-skills-data-analytics.jpg" alt="Introduction to Career Skills in Data Analytics Certificate">
-</a>
-<p>Introduction to Career Skills in Data Analytics - LinkedIn</p>
-</div>
-
-</div>
-</section>
-    
-<section id="projects">
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>Healthcare Readmissions Dashboard</h3>
-<p><strong>Tools:</strong> SQL, Power BI</p>
-
-<p class="project-summary">
-Operational analytics dashboard supporting hospital readmission reduction strategy.
-</p>
-
-<img src="Healthcare-Project-Preview.jpg" alt="Healthcare Dashboard Preview" class="project-image">
-    
-<ul class="project-highlights">
-<li>Analyzed hospital readmission trends and length of stay using SQL queries</li>
-<li>Developed interactive Power BI dashboards to track KPIs and cost drivers, improving leadership visibility into hospital performance trends</li>
-<li>Enabled data-driven operational and clinical decision-making</li>
-</ul>
-
-<a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank">
-View Project on GitHub
-</a>
-    
-</div>
-
-
-<div class="card">
-<h3>Logistics On-Time Delivery & Inventory Analysis</h3>
-<p><strong>Tools:</strong> Power BI, SQL</p>
-
-<p class="project-summary">
-Operational analytics dashboard supporting logistics on-time delivery strategy.
-</p>
-
-<img src="Logistics-Project-Preview.jpg" alt="Logistics On-Time Delivery & Inventory Analysis Dashboard Preview" class="project-image">
-    
-<ul class="project-highlights">
-<li>Evaluated on-time delivery performance and inventory risk using SQL</li>
-<li>Built Power BI dashboards to monitor shipping efficiency and supply chain KPIs</li>
-<li>Delivered insights contributing to a 15% improvement in supply chain performance</li>
-</ul>
-
-<a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI" target="_blank">
-View Project on GitHub
-</a>
-
-</div>
-
-
-<div class="card">
-<h3>Python Healthcare Data Cleaning</h3>
-<p><strong>Tools:</strong> Python, Pandas</p>
-
-<p class="project-summary">
-Operational data quality framework supporting healthcare analytics reliability.
-</p>
-
-<img src="project1-preview.jpg" alt="Python Healthcare Data Cleaning Dashboard Prreview" class="project-image">
-    
-<ul class="project-highlights">
-<li>Cleaned and validated healthcare datasets using Python and Pandas</li>
-<li>Handled missing values, inconsistent formats, and data anomalies</li>
-<li>Performed exploratory data analysis to extract actionable insights</li>
-</ul>
-
-<a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning" target="_blank">
-View Project on GitHub
-</a>
-
-</div>
-
-</div>
-</section>
-<section class="metrics">
-
-<div class="metric-box">
-<h3>9+</h3>
-<p>Years of Analytics Experience</p>
-</div>
-
-<div class="metric-box">
-<h3>15%</h3>
-<p>Supply Chain Performance Improvement</p>
-</div>
-
-<div class="metric-box">
-<h3>3+</h3>
-<p>End-to-End Analytics Dashboards Built</p>
-</div>
-
-<div class="metric-box">
-<h3>Healthcare & Logistics</h3>
-<p>Domain Specialization</p>
-</div>
-
-</section>
-<section id="contact">
-<h2>Contact</h2>
-
-<div class="contact-buttons">
-<a href="mailto:mugdhasdeodhar@gmail.com" class="btn">Email Me</a>
-<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" class="btn">LinkedIn</a>
-<a href="https://github.com/mugdhasdeodhar" target="_blank" class="btn">GitHub</a>
-</div>
-
 </section>
 
 <footer>
