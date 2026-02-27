@@ -600,6 +600,70 @@ h2::after {
   background: #1e40af;
   color: white;
 }
+
+/* ===== PROJECT PRESENTATION ENHANCEMENT ===== */
+
+.project-enhanced {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project-enhanced:hover {
+  transform: translateY(-6px);
+}
+
+.project-image-wrapper {
+  flex: 1;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.project-enhanced:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-content {
+  flex: 1.2;
+}
+
+.project-tools {
+  font-size: 14px;
+  color: #1e40af;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-description {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.project-impact {
+  background: #f1f5f9;
+  padding: 15px;
+  border-left: 4px solid #1e40af;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
   
 /* ================= FOOTER ================= */
 
@@ -623,6 +687,34 @@ footer {
   }
 }
 
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+  
 </style>
 </head>
 
@@ -808,35 +900,41 @@ footer {
 
     <!-- PROJECT 1 -->
     <div class="project-card">
-      <img src="Healthcare-Project-Preview.jpg" alt="Healthcare Dashboard" class="project-image">
 
+      <div class="project-image-wrapper">
+        <img src="Healthcare-Project-Preview.jpg"
+             alt="Healthcare Dashboard Preview"
+             class="project-image">
+      </div>
+    
       <div class="project-content">
         <h3>Healthcare Readmissions Analytics Dashboard</h3>
-
-        <div class="project-tags">
-          <span>SQL</span>
-          <span>Power BI</span>
-          <span>Healthcare Analytics</span>
-        </div>
-
+    
+        <p class="project-tools">
+          SQL • Power BI • Healthcare Analytics
+        </p>
+    
         <p class="project-description">
           Interactive dashboard analyzing hospital readmission trends,
-          length of stay, and cost drivers to support operational
-          performance optimization.
+          cost drivers, and length of stay metrics to support
+          operational performance optimization.
         </p>
-
-        <ul class="project-impact">
-          <li>Identified high-risk readmission categories using SQL queries</li>
-          <li>Designed executive KPI dashboard for clinical leadership</li>
-          <li>Improved visibility into operational cost drivers</li>
-        </ul>
-
+    
+        <div class="project-impact">
+          <strong>Business Impact:</strong>
+          Improved executive visibility into readmission trends,
+          enabling data-driven cost control discussions and
+          performance monitoring.
+        </div>
+    
         <a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi"
            target="_blank"
            class="project-link">
-           View on GitHub →
+          View on GitHub →
         </a>
+    
       </div>
+    
     </div>
 
     <!-- PROJECT 2 -->
@@ -1019,6 +1117,36 @@ footer {
 <footer>
 © 2026 Mugdha Deodhar | Data Analyst Portfolio
 </footer>
+
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-image">
+</div>
+
+<script>
+const images = document.querySelectorAll('.project-image');
+const modal = document.getElementById('lightbox-modal');
+const modalImg = document.getElementById('lightbox-image');
+const closeBtn = document.querySelector('.lightbox-close');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+modal.onclick = function(e) {
+  if(e.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
