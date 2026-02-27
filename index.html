@@ -407,55 +407,78 @@ h2::after {
 /* ABOUT SECTION UPGRADE */
 /* ============================= */
 
+.about-section {
+  padding: 100px 20px;
+}
+
 .about-container {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
   gap: 60px;
-  margin-top: 40px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1.2;
+}
+
+.about-text h2 {
+  margin-bottom: 30px;
 }
 
 .about-text p {
+  line-height: 1.8;
   margin-bottom: 20px;
-  line-height: 1.7;
   color: #475569;
-  font-size: 16.5px;
+}
+
+.approach-block {
+  margin-top: 40px;
+}
+
+.approach-block h3 {
+  margin-bottom: 15px;
+}
+
+.approach-block ul {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.approach-block li {
+  margin-bottom: 8px;
 }
 
 .about-highlights {
+  flex: 0.9;
   display: grid;
   gap: 20px;
 }
 
-.highlight-box {
+.highlight-card {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 14px;
+  padding: 22px;
+  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.highlight-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
-.highlight-box h3 {
-  font-size: 18px;
+.highlight-card h3 {
   color: #1e40af;
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 6px;
 }
 
-.highlight-box p {
+.highlight-card p {
   font-size: 14px;
   color: #64748b;
-}
-
-/* Responsive */
-
-@media (max-width: 900px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
 }
   
 /* ============================= */
@@ -521,6 +544,54 @@ h2::after {
   margin-top: 20px;
   font-weight: 500;
   color: #1e40af;
+}
+
+.contact-section {
+  padding: 100px 20px;
+  background: #f8fafc;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  margin-bottom: 25px;
+}
+
+.contact-container p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.contact-availability {
+  margin: 25px 0;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.contact-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  padding: 14px 26px;
+  border: 2px solid #1e40af;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #1e40af;
+  color: white;
 }
   
 /* ================= FOOTER ================= */
@@ -594,18 +665,20 @@ footer {
   </div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-
+<section id="about" class="about-section">
   <div class="about-container">
 
+    <!-- LEFT COLUMN -->
     <div class="about-text">
+      <h2>About Me</h2>
+
       <p>
         I am a Data Analyst with over 9 years of experience delivering analytics
         solutions across healthcare and logistics environments. My focus is on
         transforming operational data into structured, decision-ready insights
         that improve performance, visibility, and efficiency.
       </p>
+
       <p>
         My interest in analytics began with a simple question:
         why do organizations collect vast amounts of data yet struggle
@@ -613,47 +686,43 @@ footer {
         into a career focused on building clarity from complexity —
         bridging operational reality with strategic insight.
       </p>
-      <p>
-        In healthcare analytics, I have developed KPI dashboards analyzing
-        hospital readmissions, length of stay, and cost drivers to support
-        data-driven clinical and operational decisions. In supply chain
-        analytics, I have evaluated on-time delivery, inventory risk, and
-        shipping efficiency — contributing to measurable improvements including
-        a 15% increase in performance outcomes.
-      </p>
 
       <p>
-        I specialize in SQL, Power BI, Excel, and Python, with strong expertise
-        in data cleaning, dashboard design, and executive reporting. I work
-        closely with cross-functional stakeholders to translate analytical
-        findings into clear business strategies.
+        I specialize in SQL, Power BI, Excel, and Python, working closely
+        with cross-functional stakeholders to translate analytical findings
+        into clear business strategies.
       </p>
+
+      <div class="approach-block">
+        <h3>My Approach to Analytics</h3>
+        <ul>
+          <li>Prioritize business context before technical execution</li>
+          <li>Design dashboards for decision clarity, not visual complexity</li>
+          <li>Focus on measurable operational impact</li>
+          <li>Communicate insights in structured, executive-ready formats</li>
+        </ul>
+      </div>
+
     </div>
 
-    <h3 style="margin-top:40px;">My Approach to Analytics</h3>
-    <ul class="personal-approach">
-      <li>Prioritize business context before technical execution</li>
-      <li>Design dashboards for decision clarity, not visual complexity</li>
-      <li>Focus on measurable operational impact</li>
-      <li>Communicate insights in structured, executive-friendly formats</li>
-    </ul>
+    <!-- RIGHT COLUMN -->
     <div class="about-highlights">
-      <div class="highlight-box">
+      <div class="highlight-card">
         <h3>9+ Years</h3>
         <p>Analytics Experience</p>
       </div>
 
-      <div class="highlight-box">
+      <div class="highlight-card">
         <h3>Healthcare & Logistics</h3>
         <p>Domain Specialization</p>
       </div>
 
-      <div class="highlight-box">
+      <div class="highlight-card">
         <h3>SQL • Power BI • Python</h3>
         <p>Core Technical Stack</p>
       </div>
 
-      <div class="highlight-box">
+      <div class="highlight-card">
         <h3>15% Improvement</h3>
         <p>Supply Chain Performance Impact</p>
       </div>
@@ -903,57 +972,42 @@ footer {
   </div>
 </section>
 
-<section id="contact">
-  <h2>Let’s Connect</h2>
-
+<section id="contact" class="contact-section">
   <div class="contact-container">
 
-    <div class="contact-text">
-      <p>
-        I am currently open to remote Data Analyst opportunities,
-        particularly in healthcare and supply chain analytics.
-      </p>
+    <h2>Let’s Connect</h2>
 
-      <p>
-        If you're seeking a structured, results-driven analyst who can
-        translate operational data into actionable business insights,
-        I would be pleased to connect.
-      </p>
+    <p>
+      I am currently open to remote Data Analyst opportunities,
+      particularly in healthcare and supply chain analytics.
+    </p>
 
-      <p>
-        My long-term goal is to contribute to organizations where
-        data strategy directly influences operational excellence
-        and measurable performance improvement.
-      </p>
-      <p class="availability">
-        📍 Available for Remote Roles (Canada Time Zones)
-      </p>
+    <p>
+      My long-term goal is to contribute to organizations where
+      data strategy directly influences operational excellence
+      and measurable performance improvement.
+    </p>
+
+    <div class="contact-availability">
+      📍 Available for Remote Roles (Canada Time Zones)
     </div>
 
-    <div class="contact-actions">
-
-      <a href="mailto:mugdhasdeodhar@gmail.com" class="contact-btn primary">
-        📧 Email Me
+    <div class="contact-buttons">
+      <a href="mailto:mugdhasdeodhar@gmail.com" class="btn-primary">
+        Email Me
       </a>
 
-      <a href="Mugdha_Deodhar_Data_Analyst_Resume_2026.pdf"
-         target="_blank"
-         class="contact-btn resume">
-         📄 View Resume
+      <a href="Mugdha_Deodhar_Data_Analyst_Resume_2026.pdf" target="_blank" class="btn-secondary">
+        View Resume
       </a>
 
-      <a href="https://linkedin.com/in/mugdha-deodhar"
-         target="_blank"
-         class="contact-btn secondary">
-         🔗 LinkedIn Profile
+      <a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" class="btn-outline">
+        LinkedIn
       </a>
 
-      <a href="https://github.com/mugdhasdeodhar"
-         target="_blank"
-         class="contact-btn secondary">
-         💻 GitHub Portfolio
+      <a href="https://github.com/mugdhasdeodhar" target="_blank" class="btn-outline">
+        GitHub
       </a>
-
     </div>
 
   </div>
