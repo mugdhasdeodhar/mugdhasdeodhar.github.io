@@ -325,71 +325,90 @@ transform: translateY(-3px);
 box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
 }
 
+/* ============================= */
 /* HERO SECTION */
+/* ============================= */
+
 .hero {
-  padding: 100px 20px;
-  background: linear-gradient(to right, #f8f9fc, #ffffff);
+  padding: 160px 20px;
+  background: #f4f6fb;
 }
 
 .hero-container {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 80px;
 }
 
-/*.hero-text h1 {
-  font-size: 52px;
+/* TEXT COLUMN */
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 54px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #0f172a;
 }
 
 .hero-text h2 {
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 20px;
-  color: #555;
-}*/
+  margin-bottom: 30px;
+  color: #334155;
+  max-width: 600px;
+}
 
 .hero-text p {
   font-size: 18px;
-  line-height: 1.6;
-  max-width: 500px;
-  margin-bottom: 30px;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 40px;
+  color: #475569;
 }
+
+/* BUTTONS */
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
 }
 
 .btn-primary {
-  padding: 12px 24px;
-  background-color: #1e3a8a;
-  color: white;
-  border-radius: 6px;
+  padding: 14px 28px;
+  background-color: #1e40af;
+  color: #ffffff;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #162c6b;
+  background-color: #162e8c;
 }
 
 .btn-secondary {
-  padding: 12px 24px;
-  border: 2px solid #1e3a8a;
-  color: #1e3a8a;
-  border-radius: 6px;
+  padding: 14px 28px;
+  border: 2px solid #1e40af;
+  color: #1e40af;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #1e40af;
+  color: #ffffff;
 }
+
+/* IMAGE COLUMN */
 
 .hero-image {
   flex: 1;
@@ -398,10 +417,39 @@ box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
 }
 
 .hero-image img {
-  width: 320px;
+  width: 340px;
   max-width: 100%;
   border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
 }
     
 .skills span {
@@ -502,45 +550,7 @@ gap: 20px;
 flex-wrap: wrap;
 margin-top: 20px;
 }
-@media (max-width: 768px) {
 
-  .hero-container {
-    max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 80px;
-  }
-
-  .hero-text h1 {
-    font-size: 36px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    width: 250px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-}   
-.btn-primary {
-  background-color: #1e40af;
-  color: white;
-  font-weight: 600;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 2px solid #1e40af;
-}
-    
 footer {
 text-align: center;
 padding: 20px;
@@ -581,6 +591,30 @@ color: white;
 
     <div class="hero-image">
       <img src="images/profile.jpg" alt="Mugdha Deodhar">
+    </div>
+
+  </div>
+</section><section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h1>Hi, I'm Mugdha Deodhar</h1>
+      <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
+
+      <p>
+        I transform operational data into actionable insights that improve 
+        performance, efficiency, and decision-making.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Leave this here. Upload image later. -->
+    <div class="hero-image">
+      <img src="Mugdha_Profile.jpg" alt="Mugdha Deodhar">
     </div>
 
   </div>
