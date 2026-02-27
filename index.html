@@ -205,7 +205,9 @@ padding: 110px 80px;
 max-width: 1200px;
 margin: 0 auto;
 }
-
+section {
+  padding: 80px 20px;
+}
 section h2 {
     font-size: 32px;
     margin-bottom: 40px;
@@ -213,7 +215,14 @@ section h2 {
     position: relative;
     display: inline-block;
 }
+h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
 
+p {
+  margin-bottom: 15px;
+}
 section h2::after {
     content: "";
     width: 70px;
@@ -305,7 +314,76 @@ transition: all 0.3s ease;
 transform: translateY(-3px);
 box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
 }
-    
+
+/* HERO SECTION */
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(to right, #f8f9fc, #ffffff);
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-text h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #1e3a8a;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #162c6b;
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 12px;
+}
     
 .skills span {
 display: inline-block;
@@ -405,7 +483,30 @@ gap: 20px;
 flex-wrap: wrap;
 margin-top: 20px;
 }
-    
+@media (max-width: 768px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 250px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}   
 footer {
 text-align: center;
 padding: 20px;
@@ -428,30 +529,27 @@ color: white;
 </header>
 
 <section class="hero">
+  <div class="hero-container">
 
-<h1 class="hero-title">
-Data Analyst<br>
-<span class="hero-highlight">Healthcare & Logistics Analytics</span>
-</h1>
+    <div class="hero-text">
+      <h1>Hi, I'm Mugdha Deodhar</h1>
+      <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
+      <p>
+        I transform operational data into actionable insights that improve
+        performance, efficiency, and decision-making.
+      </p>
 
-<p class="hero-subtitle">
-Turning operational data into actionable insights that drive performance improvement.
-</p>
-    
-<div class="hero-credibility">
-<span>• Open to Remote Opportunities (Canada Time Zones)</span>
-<span>• 9+ Years | Healthcare & Supply Chain Analytics</span>
-<span>• 15% Supply Chain Performance Improvement Delivered</span>
-</div>
-    
-<p class="hero-tools">
-SQL | Excel | Power BI | Python | KPI Reporting
-</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
 
-<a href="Mugdha_Deodhar_Data_Analyst_Resume_2026.pdf" target="_blank" class="btn">
-View Resume
-</a>
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="Mugdha Deodhar">
+    </div>
 
+  </div>
 </section>
     
 <section id="about">
