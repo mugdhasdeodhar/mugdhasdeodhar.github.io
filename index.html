@@ -231,27 +231,32 @@ h2::after {
 /* ================= PROJECTS ================= */
 
 .projects-grid {
-  display: grid;
-  gap: 50px;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 60px;
 }
+
+/* Main Project Card */
 
 .project-card {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 50px;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: 70px;
   align-items: center;
   background: #ffffff;
-  padding: 40px;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  padding: 55px 60px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
   transition: all 0.35s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
 }
+
+/* Alternate layout */
 
 .project-reverse {
   direction: rtl;
@@ -261,60 +266,67 @@ h2::after {
   direction: ltr;
 }
 
+/* Image Styling */
+
 .project-image-wrapper {
   overflow: hidden;
-  border-radius: 16px;
-  cursor: pointer;
+  border-radius: 18px;
 }
 
 .project-image {
   width: 100%;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
+/* Content */
+
 .project-content h3 {
-  font-size: 24px;
-  margin-bottom: 18px;
+  font-size: 26px;
+  margin-bottom: 20px;
   color: #0f172a;
 }
 
 .project-tags {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .project-tags span {
   display: inline-block;
   background: #eef2ff;
   color: #1e40af;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .project-description {
-  margin-bottom: 24px;
-  line-height: 1.8;
+  margin-bottom: 28px;
+  line-height: 1.85;
   font-size: 16px;
   color: #475569;
 }
 
+/* Business Impact Box */
+
 .project-impact {
   background: #f1f5f9;
-  padding: 22px;
+  padding: 26px;
   border-left: 6px solid #1e40af;
-  border-radius: 12px;
-  margin-bottom: 28px;
+  border-radius: 14px;
+  margin-bottom: 30px;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
+
+/* Link */
 
 .project-link {
   text-decoration: none;
@@ -325,9 +337,21 @@ h2::after {
 }
 
 .project-link:hover {
-  padding-left: 6px;
+  padding-left: 8px;
 }
 
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+  }
+
+  .project-reverse {
+    direction: ltr;
+  }
+}
 /* ================= ABOUT ================= */
 
 .about-container {
