@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mugdha Deodhar | Data Analyst</title>
 <meta name="description" content="Data Analyst specializing in Healthcare and Supply Chain Analytics. SQL, Power BI, Excel, Python.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ============================= */
-/* GLOBAL STYLES */
-/* ============================= */
+/* ================= GLOBAL ================= */
 
 * {
   margin: 0;
@@ -49,9 +48,7 @@ h2::after {
   left: 0;
 }
 
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
+/* ================= NAVBAR ================= */
 
 .navbar {
   background: #000;
@@ -81,9 +78,9 @@ h2::after {
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 30px;
-  list-style: none;
 }
 
 .nav-links a {
@@ -114,9 +111,7 @@ h2::after {
   opacity: 0.8;
 }
 
-/* ============================= */
-/* HERO */
-/* ============================= */
+/* ================= HERO ================= */
 
 .hero {
   padding: 150px 20px 140px;
@@ -135,13 +130,11 @@ h2::after {
 .hero-text h1 {
   font-size: 58px;
   font-weight: 700;
-  line-height: 1.15;
   margin-bottom: 25px;
 }
 
 .hero-text h2 {
   font-size: 22px;
-  font-weight: 500;
   margin-bottom: 35px;
   color: #334155;
 }
@@ -159,7 +152,7 @@ h2::after {
   gap: 18px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn {
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
@@ -194,32 +187,15 @@ h2::after {
   box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
-/* ============================= */
-/* CARDS (Projects, Skills, Metrics) */
-/* ============================= */
+/* ================= GRID SYSTEM ================= */
 
-.skills-grid,
-.projects,
-.metrics {
+.grid-3 {
   display: grid;
   gap: 30px;
-}
-
-.skills-grid,
-.projects {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.metrics {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  text-align: center;
-  padding: 80px 20px;
-  background: #f8f9fa;
-}
-
-.card,
-.skill-category,
-.metric-box {
+.card {
   background: #fff;
   padding: 25px;
   border-radius: 14px;
@@ -227,9 +203,7 @@ h2::after {
   transition: 0.3s;
 }
 
-.card:hover,
-.skill-category:hover,
-.metric-box:hover {
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
@@ -240,9 +214,29 @@ h2::after {
   margin: 15px 0;
 }
 
-/* ============================= */
-/* CERTIFICATES */
-/* ============================= */
+.metrics {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.metric-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.metric-box h3 {
+  font-size: 36px;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+/* ================= CERTIFICATES ================= */
 
 .certificate-grid {
   display: grid;
@@ -260,9 +254,7 @@ h2::after {
   transform: scale(1.05);
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
+/* ================= FOOTER ================= */
 
 footer {
   background: #000;
@@ -271,9 +263,7 @@ footer {
   padding: 20px;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
   .hero-container {
@@ -319,10 +309,7 @@ footer {
     <div class="hero-text">
       <h1>Hi, I'm Mugdha Deodhar</h1>
       <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
-      <p>
-        I transform operational data into actionable insights that improve performance,
-        efficiency, and decision-making.
-      </p>
+      <p>I transform operational data into actionable insights that improve performance, efficiency, and decision-making.</p>
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-secondary">Contact Me</a>
