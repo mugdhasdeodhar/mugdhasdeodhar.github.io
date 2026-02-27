@@ -206,6 +206,143 @@ h2::after {
   box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
+/* ============================= */
+/* SKILLS SECTION UPGRADE */
+/* ============================= */
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.skill-tags {
+  margin-bottom: 15px;
+}
+
+.skill-tags span {
+  display: inline-block;
+  background: #eef2ff;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+}
+  
+/* ============================= */
+/* PROJECTS SECTION UPGRADE */
+/* ============================= */
+
+.projects-grid {
+  display: grid;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  margin-bottom: 15px;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: #eef2ff;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.project-impact {
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+
+.project-impact li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e40af;
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+}
+  
 /* ================= GRID SYSTEM ================= */
 
 .grid-3 {
@@ -255,25 +392,126 @@ h2::after {
   margin-bottom: 10px;
 }
 
-/* ================= CERTIFICATES ================= */
+/* ============================= */
+/* ABOUT SECTION UPGRADE */
+/* ============================= */
 
-.certificate-grid {
+.about-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #475569;
+  font-size: 16.5px;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 20px;
+}
+
+.highlight-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.highlight-box h3 {
+  font-size: 18px;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.highlight-box p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+  
+/* ============================= */
+/* CERTIFICATES SECTION UPGRADE */
+/* ============================= */
+
+.certificates-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  gap: 35px;
+  margin-top: 40px;
 }
 
-.certificate-item img {
+.certificate-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.certificate-card img {
   width: 100%;
   border-radius: 12px;
-  transition: 0.3s;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
 }
 
-.certificate-item img:hover {
-  transform: scale(1.05);
+.certificate-card img:hover {
+  transform: scale(1.03);
 }
 
- 
+.certificate-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Resume Button (Distinct but Balanced) */
+
+.contact-btn.resume {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.contact-btn.resume:hover {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.availability {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #1e40af;
+}
+  
 /* ================= FOOTER ================= */
 
 footer {
@@ -342,28 +580,327 @@ footer {
 </section>
 
 <section id="about">
-  <h2>About</h2>
-  <p>About section content goes here.</p>
+  <h2>About Me</h2>
+
+  <div class="about-container">
+
+    <div class="about-text">
+      <p>
+        I am a Data Analyst with over 9 years of experience delivering analytics
+        solutions across healthcare and logistics environments. My focus is on
+        transforming operational data into structured, decision-ready insights
+        that improve performance, visibility, and efficiency.
+      </p>
+
+      <p>
+        In healthcare analytics, I have developed KPI dashboards analyzing
+        hospital readmissions, length of stay, and cost drivers to support
+        data-driven clinical and operational decisions. In supply chain
+        analytics, I have evaluated on-time delivery, inventory risk, and
+        shipping efficiency — contributing to measurable improvements including
+        a 15% increase in performance outcomes.
+      </p>
+
+      <p>
+        I specialize in SQL, Power BI, Excel, and Python, with strong expertise
+        in data cleaning, dashboard design, and executive reporting. I work
+        closely with cross-functional stakeholders to translate analytical
+        findings into clear business strategies.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-box">
+        <h3>9+ Years</h3>
+        <p>Analytics Experience</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Healthcare & Logistics</h3>
+        <p>Domain Specialization</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>SQL • Power BI • Python</h3>
+        <p>Core Technical Stack</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>15% Improvement</h3>
+        <p>Supply Chain Performance Impact</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <p>Skills section content goes here.</p>
+  <h2>Technical Skills</h2>
+
+  <div class="skills-container">
+
+    <!-- DATA & QUERYING -->
+    <div class="skill-card">
+      <h3>Data Querying & Programming</h3>
+      <div class="skill-tags">
+        <span>SQL</span>
+        <span>Python</span>
+        <span>Pandas</span>
+      </div>
+      <p>
+        Writing optimized SQL queries for data extraction, transformation,
+        and business reporting. Performing structured data cleaning and
+        exploratory analysis using Python.
+      </p>
+    </div>
+
+    <!-- DATA VISUALIZATION -->
+    <div class="skill-card">
+      <h3>Data Visualization & Dashboarding</h3>
+      <div class="skill-tags">
+        <span>Power BI</span>
+        <span>KPI Dashboards</span>
+        <span>Executive Reporting</span>
+      </div>
+      <p>
+        Designing interactive dashboards that translate operational
+        metrics into actionable insights for leadership and cross-functional teams.
+      </p>
+    </div>
+
+    <!-- ANALYTICS & PERFORMANCE -->
+    <div class="skill-card">
+      <h3>Performance & Operational Analytics</h3>
+      <div class="skill-tags">
+        <span>Healthcare Analytics</span>
+        <span>Supply Chain Analytics</span>
+        <span>KPI Analysis</span>
+      </div>
+      <p>
+        Analyzing readmissions, delivery performance, inventory risk,
+        and operational cost drivers to improve efficiency and decision-making.
+      </p>
+    </div>
+
+    <!-- TOOLS & WORKFLOW -->
+    <div class="skill-card">
+      <h3>Tools & Workflow</h3>
+      <div class="skill-tags">
+        <span>Advanced Excel</span>
+        <span>GitHub</span>
+        <span>Jupyter Notebook</span>
+      </div>
+      <p>
+        Building automated reports, managing version control,
+        and documenting analytics workflows for collaborative environments.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <p>Projects section content goes here.</p>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+      <img src="Healthcare-Project-Preview.jpg" alt="Healthcare Dashboard" class="project-image">
+
+      <div class="project-content">
+        <h3>Healthcare Readmissions Analytics Dashboard</h3>
+
+        <div class="project-tags">
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Healthcare Analytics</span>
+        </div>
+
+        <p class="project-description">
+          Interactive dashboard analyzing hospital readmission trends,
+          length of stay, and cost drivers to support operational
+          performance optimization.
+        </p>
+
+        <ul class="project-impact">
+          <li>Identified high-risk readmission categories using SQL queries</li>
+          <li>Designed executive KPI dashboard for clinical leadership</li>
+          <li>Improved visibility into operational cost drivers</li>
+        </ul>
+
+        <a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi"
+           target="_blank"
+           class="project-link">
+           View on GitHub →
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <img src="Logistics-Project-Preview.jpg" alt="Logistics Dashboard" class="project-image">
+
+      <div class="project-content">
+        <h3>Logistics On-Time Delivery & Inventory Analysis</h3>
+
+        <div class="project-tags">
+          <span>Power BI</span>
+          <span>SQL</span>
+          <span>Supply Chain Analytics</span>
+        </div>
+
+        <p class="project-description">
+          Operational dashboard evaluating shipment performance,
+          delivery efficiency, and inventory risk exposure.
+        </p>
+
+        <ul class="project-impact">
+          <li>Analyzed on-time delivery performance using SQL-based metrics</li>
+          <li>Built supply chain KPI monitoring dashboard</li>
+          <li>Contributed to 15% supply chain performance improvement</li>
+        </ul>
+
+        <a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI"
+           target="_blank"
+           class="project-link">
+           View on GitHub →
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+      <img src="project1-preview.jpg" alt="Python Data Cleaning Project" class="project-image">
+
+      <div class="project-content">
+        <h3>Python Healthcare Data Cleaning Framework</h3>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Data Cleaning</span>
+        </div>
+
+        <p class="project-description">
+          Data validation and cleaning framework improving dataset
+          reliability for downstream healthcare analytics.
+        </p>
+
+        <ul class="project-impact">
+          <li>Handled missing values and inconsistent data formats</li>
+          <li>Improved dataset quality for reporting accuracy</li>
+          <li>Performed exploratory analysis for actionable insights</li>
+        </ul>
+
+        <a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning"
+           target="_blank"
+           class="project-link">
+           View on GitHub →
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section id="certificates">
-  <h2>Certificates</h2>
-  <p>Certificates section content goes here.</p>
+  <h2>Certifications & Credentials</h2>
+
+  <div class="certificates-container">
+
+    <div class="certificate-card">
+      <a href="CDICertificate-SupplyChainManagement-Mugdha.jpg" target="_blank">
+        <img src="CDICertificate-SupplyChainManagement-Mugdha.jpg" alt="Post Graduate Diploma – Supply Chain Management">
+      </a>
+      <h3>Post Graduate Diploma</h3>
+      <p>Supply Chain Management</p>
+    </div>
+
+    <div class="certificate-card">
+      <a href="MCM_Convocation_Certificate.jpg" target="_blank">
+        <img src="MCM_Convocation_Certificate.jpg" alt="Master's in Computer Management">
+      </a>
+      <h3>Master's Degree</h3>
+      <p>Computer Management</p>
+    </div>
+
+    <div class="certificate-card">
+      <a href="BSc_Microbiology_Convocation_Certificate.jpg" target="_blank">
+        <img src="BSc_Microbiology_Convocation_Certificate.jpg" alt="Bachelor of Science – Microbiology">
+      </a>
+      <h3>Bachelor of Science</h3>
+      <p>Microbiology</p>
+    </div>
+
+    <div class="certificate-card">
+      <a href="data-analytics-bootcamp.jpg" target="_blank">
+        <img src="data-analytics-bootcamp.jpg" alt="Data Analytics Bootcamp">
+      </a>
+      <h3>Data Analytics Bootcamp</h3>
+      <p>Professional Certification</p>
+    </div>
+
+    <div class="certificate-card">
+      <a href="career-skills-data-analytics.jpg" target="_blank">
+        <img src="career-skills-data-analytics.jpg" alt="Career Skills in Data Analytics">
+      </a>
+      <h3>Career Skills in Data Analytics</h3>
+      <p>LinkedIn Learning</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Contact section content goes here.</p>
+  <h2>Let’s Connect</h2>
+
+  <div class="contact-container">
+
+    <div class="contact-text">
+      <p>
+        I am currently open to remote Data Analyst opportunities,
+        particularly in healthcare and supply chain analytics.
+      </p>
+
+      <p>
+        If you're seeking a structured, results-driven analyst who can
+        translate operational data into actionable business insights,
+        I would be pleased to connect.
+      </p>
+
+      <p class="availability">
+        📍 Available for Remote Roles (Canada Time Zones)
+      </p>
+    </div>
+
+    <div class="contact-actions">
+
+      <a href="mailto:mugdhasdeodhar@gmail.com" class="contact-btn primary">
+        📧 Email Me
+      </a>
+
+      <a href="Mugdha_Deodhar_Data_Analyst_Resume.pdf"
+         target="_blank"
+         class="contact-btn resume">
+         📄 View Resume
+      </a>
+
+      <a href="https://linkedin.com/in/mugdha-deodhar"
+         target="_blank"
+         class="contact-btn secondary">
+         🔗 LinkedIn Profile
+      </a>
+
+      <a href="https://github.com/mugdhasdeodhar"
+         target="_blank"
+         class="contact-btn secondary">
+         💻 GitHub Portfolio
+      </a>
+
+    </div>
+
+  </div>
 </section>
   
 <footer>
