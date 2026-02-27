@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 /* ================= GLOBAL ================= */
 
 * {
@@ -97,20 +96,20 @@ h2::after {
 }
 
 .nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -6px;
-    background: #3b82f6;
-    transition: 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #3b82f6;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+  width: 100%;
 }
-  
+
 .nav-social {
   display: flex;
   gap: 18px;
@@ -171,12 +170,13 @@ h2::after {
   gap: 18px;
 }
 
-.btn-primary, .btn-secondary, .btn {
-  padding: 14px 28px;
+.btn-primary,
+.btn-outline {
+  padding: 14px 26px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -189,12 +189,12 @@ h2::after {
   transform: translateY(-2px);
 }
 
-.btn-secondary {
+.btn-outline {
   border: 2px solid #1e40af;
   color: #1e40af;
 }
 
-.btn-secondary:hover {
+.btn-outline:hover {
   background: #1e40af;
   color: #fff;
   transform: translateY(-2px);
@@ -206,9 +206,7 @@ h2::after {
   box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
-/* ============================= */
-/* SKILLS SECTION UPGRADE */
-/* ============================= */
+/* ================= SKILLS ================= */
 
 .skills-container {
   display: grid;
@@ -230,186 +228,107 @@ h2::after {
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-.skill-card h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #1e293b;
-}
-
-.skill-tags {
-  margin-bottom: 15px;
-}
-
-.skill-tags span {
-  display: inline-block;
-  background: #eef2ff;
-  color: #1e40af;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-
-.skill-card p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #475569;
-}
-  
-/* ============================= */
-/* PROJECTS SECTION UPGRADE */
-/* ============================= */
+/* ================= PROJECTS ================= */
 
 .projects-grid {
   display: grid;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 50px;
 }
 
 .project-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
   background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+}
+
+.project-reverse {
+  direction: rtl;
+}
+
+.project-reverse > * {
+  direction: ltr;
+}
+
+.project-image-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .project-image {
   width: 100%;
-  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
 }
 
 .project-content h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 18px;
+  color: #0f172a;
 }
 
 .project-tags {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .project-tags span {
   display: inline-block;
   background: #eef2ff;
   color: #1e40af;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
+  font-weight: 600;
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
 .project-description {
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 16px;
   color: #475569;
 }
 
 .project-impact {
-  margin-bottom: 20px;
-  padding-left: 18px;
-}
-
-.project-impact li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  background: #f1f5f9;
+  padding: 22px;
+  border-left: 6px solid #1e40af;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .project-link {
   text-decoration: none;
   font-weight: 600;
   color: #1e40af;
-  transition: 0.3s;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  padding-left: 6px;
 }
 
-/* Responsive */
-
-@media (max-width: 900px) {
-  .project-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-.personal-approach {
-  margin-top: 15px;
-  padding-left: 20px;
-  line-height: 1.8;
-  color: #475569;
-}
-
-.personal-approach li {
-  margin-bottom: 8px;
-}
-  
-/* ================= GRID SYSTEM ================= */
-
-.grid-3 {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.project-image {
-  width: 100%;
-  border-radius: 10px;
-  margin: 15px 0;
-}
-
-.metrics {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  text-align: center;
-  padding: 80px 20px;
-  background: #f8f9fa;
-}
-
-.metric-box {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.metric-box h3 {
-  font-size: 36px;
-  color: #1e40af;
-  margin-bottom: 10px;
-}
-
-/* ============================= */
-/* ABOUT SECTION UPGRADE */
-/* ============================= */
-
-.about-section {
-  padding: 100px 20px;
-}
+/* ================= ABOUT ================= */
 
 .about-container {
   max-width: 1150px;
@@ -421,10 +340,6 @@ h2::after {
 
 .about-text {
   flex: 1.2;
-}
-
-.about-text h2 {
-  margin-bottom: 30px;
 }
 
 .about-text p {
@@ -440,20 +355,6 @@ h2::after {
   border-radius: 12px;
   border-left: 4px solid #1e40af;
 }
-  
-.approach-block h3 {
-  margin-bottom: 15px;
-}
-
-.approach-block ul {
-  padding-left: 20px;
-  line-height: 1.8;
-  color: #475569;
-}
-
-.approach-block li {
-  margin-bottom: 8px;
-}
 
 .about-highlights {
   flex: 0.9;
@@ -463,33 +364,7 @@ h2::after {
   top: 120px;
 }
 
-.highlight-card {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.highlight-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-.highlight-card h3 {
-  color: #1e40af;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.highlight-card p {
-  font-size: 14px;
-  color: #64748b;
-}
-  
-/* ============================= */
-/* CERTIFICATES SECTION UPGRADE */
-/* ============================= */
+/* ================= CERTIFICATES ================= */
 
 .certificates-container {
   display: grid;
@@ -516,67 +391,13 @@ h2::after {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: 0.3s ease;
 }
 
-.certificate-card img:hover {
-  transform: scale(1.03);
-}
-
-.certificate-card h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: #1e293b;
-}
-
-.certificate-card p {
-  font-size: 14px;
-  color: #64748b;
-}
-
-/* Resume Button (Distinct but Balanced) */
-
-.contact-btn.resume {
-  background-color: #0f172a;
-  color: #ffffff;
-}
-
-.contact-btn.resume:hover {
-  background-color: #1e293b;
-  transform: translateY(-2px);
-}
-
-.availability {
-  margin-top: 20px;
-  font-weight: 500;
-  color: #1e40af;
-}
+/* ================= CONTACT ================= */
 
 .contact-section {
   padding: 100px 20px;
   background: #f8fafc;
-}
-
-.contact-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.contact-container h2 {
-  margin-bottom: 25px;
-}
-
-.contact-container p {
-  margin-bottom: 15px;
-  line-height: 1.8;
-  color: #475569;
-}
-
-.contact-availability {
-  margin: 30px 0;
-  font-weight: 600;
-  color: #1e40af;
-  font-size: 15px;
 }
 
 .contact-buttons {
@@ -586,85 +407,6 @@ h2::after {
   flex-wrap: wrap;
 }
 
-.btn-outline {
-  padding: 14px 26px;
-  border: 2px solid #1e40af;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #1e40af;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: #1e40af;
-  color: white;
-}
-
-/* ===== PROJECT PRESENTATION ENHANCEMENT ===== */
-
-.project-enhanced {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.project-enhanced:hover {
-  transform: translateY(-6px);
-}
-
-.project-image-wrapper {
-  flex: 1;
-  cursor: pointer;
-}
-
-.project-image {
-  width: 100%;
-  border-radius: 14px;
-  transition: transform 0.3s ease;
-}
-
-.project-enhanced:hover .project-image {
-  transform: scale(1.05);
-}
-
-.project-content {
-  flex: 1.2;
-}
-
-.project-tools {
-  font-size: 14px;
-  color: #1e40af;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.project-description {
-  margin-bottom: 18px;
-  line-height: 1.7;
-  color: #475569;
-}
-
-.project-impact {
-  background: #f1f5f9;
-  padding: 15px;
-  border-left: 4px solid #1e40af;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.project-link {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1e40af;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-  
 /* ================= FOOTER ================= */
 
 footer {
@@ -677,15 +419,27 @@ footer {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
+
   .hero-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-buttons {
-    justify-content: center;
+  .project-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .project-reverse {
+    direction: ltr;
+  }
+
+  .about-container {
+    flex-direction: column;
   }
 }
+
+/* ================= LIGHTBOX ================= */
 
 .lightbox-modal {
   display: none;
@@ -714,7 +468,6 @@ footer {
   font-size: 40px;
   cursor: pointer;
 }
-  
 </style>
 </head>
 
@@ -910,9 +663,11 @@ footer {
       <div class="project-content">
         <h3>Healthcare Readmissions Analytics Dashboard</h3>
     
-        <p class="project-tools">
-          SQL • Power BI • Healthcare Analytics
-        </p>
+        <div class="project-tags">
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Healthcare Analytics</span>
+        </div>
     
         <p class="project-description">
           Interactive dashboard analyzing hospital readmission trends,
@@ -938,70 +693,83 @@ footer {
     </div>
 
     <!-- PROJECT 2 -->
-    <div class="project-card">
-      <img src="Logistics-Project-Preview.jpg" alt="Logistics Dashboard" class="project-image">
-
+    <div class="project-card project-reverse">
+    
+      <div class="project-image-wrapper">
+        <img src="Logistics-Project-Preview.jpg"
+             alt="Logistics On-Time Delivery Dashboard"
+             class="project-image">
+      </div>
+    
       <div class="project-content">
-        <h3>Logistics On-Time Delivery & Inventory Analysis</h3>
-
+        <h3>Logistics On-Time Delivery & Inventory Analytics</h3>
+    
         <div class="project-tags">
           <span>Power BI</span>
           <span>SQL</span>
           <span>Supply Chain Analytics</span>
         </div>
-
+    
         <p class="project-description">
-          Operational dashboard evaluating shipment performance,
-          delivery efficiency, and inventory risk exposure.
+          Operational analytics dashboard evaluating shipment performance,
+          on-time delivery metrics, and inventory risk exposure to improve
+          supply chain visibility and efficiency.
         </p>
-
-        <ul class="project-impact">
-          <li>Analyzed on-time delivery performance using SQL-based metrics</li>
-          <li>Built supply chain KPI monitoring dashboard</li>
-          <li>Contributed to 15% supply chain performance improvement</li>
-        </ul>
-
+    
+        <div class="project-impact">
+          <strong>Business Impact:</strong>
+          Identified delivery bottlenecks and inventory risk trends,
+          enabling structured KPI monitoring and contributing to a
+          15% improvement in supply chain performance.
+        </div>
+    
         <a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI"
            target="_blank"
            class="project-link">
            View on GitHub →
         </a>
+    
       </div>
     </div>
-
     <!-- PROJECT 3 -->
     <div class="project-card">
-      <img src="project1-preview.jpg" alt="Python Data Cleaning Project" class="project-image">
-
+    
+      <div class="project-image-wrapper">
+        <img src="project1-preview.jpg"
+             alt="Python Healthcare Data Cleaning Framework"
+             class="project-image">
+      </div>
+    
       <div class="project-content">
         <h3>Python Healthcare Data Cleaning Framework</h3>
-
+    
         <div class="project-tags">
           <span>Python</span>
           <span>Pandas</span>
           <span>Data Cleaning</span>
         </div>
-
+    
         <p class="project-description">
-          Data validation and cleaning framework improving dataset
-          reliability for downstream healthcare analytics.
+          Structured data validation and cleaning framework addressing
+          missing values, inconsistent formats, and anomalies in healthcare
+          datasets to improve downstream analytics reliability.
         </p>
-
-        <ul class="project-impact">
-          <li>Handled missing values and inconsistent data formats</li>
-          <li>Improved dataset quality for reporting accuracy</li>
-          <li>Performed exploratory analysis for actionable insights</li>
-        </ul>
-
+    
+        <div class="project-impact">
+          <strong>Business Impact:</strong>
+          Improved data accuracy and reporting consistency,
+          strengthening confidence in performance dashboards
+          and executive decision-making outputs.
+        </div>
+    
         <a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning"
            target="_blank"
            class="project-link">
            View on GitHub →
         </a>
+    
       </div>
     </div>
-
-  </div>
 </section>
 
 <section id="certificates">
