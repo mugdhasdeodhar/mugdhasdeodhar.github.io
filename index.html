@@ -86,6 +86,11 @@ color: #00adb5;
 .skill-category p {
 line-height: 1.6;
 }
+
+.highlight {
+  display: block;
+}
+  
 .hero-text h1 {
   color: #111;   /* Dark text */
 }
@@ -94,6 +99,15 @@ line-height: 1.6;
   color: #333;
 }
 
+.hero-text h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1e40af;
+  margin-top: 14px;
+  border-radius: 2px;
+}
 .hero-text p {
   color: #444;
 }
@@ -361,7 +375,7 @@ box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
 .hero-text h2 {
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: 38px;
   color: #334155;
   max-width: 620px;
 }
@@ -421,10 +435,10 @@ box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3);
 }
 
 .hero-image img {
-  width: 360px;
+  width: 320px;
   max-width: 100%;
   border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
 }
 
 /* RESPONSIVE */
@@ -581,7 +595,9 @@ color: white;
   <div class="hero-container">
 
     <div class="hero-text">
-      <h1>Hi, I'm Mugdha Deodhar</h1>
+      <h1>
+        Hi, I'm <span class="highlight">Mugdha Deodhar</span>
+      </h1>
       <h2>Data Analyst | Supply Chain & Healthcare Analytics</h2>
       <p>
         I transform operational data into actionable insights that improve
