@@ -9,6 +9,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ================= NAVBAR ================= */
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0077b6;
+}
+  
 /* ================= GLOBAL ================= */
 
 * {
@@ -22,6 +65,8 @@ body {
   color: #1e293b;
   scroll-behavior: smooth;
   background: #ffffff;
+  font-family: 'YourFont', sans-serif;
+  padding-top: 80px;
 }
 
 section {
@@ -66,6 +111,10 @@ h2::after {
   z-index: 1000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+  
 .nav-container {
   max-width: 1180px;
   margin: 0 auto;
@@ -508,6 +557,19 @@ footer {
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Mugdha Deodhar</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+  
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">
@@ -557,7 +619,7 @@ footer {
 
     <!-- LEFT COLUMN -->
     <div class="about-text">
-      <h2>About Me</h2>
+      <section id="about">
     
       <p>
         I am a Data Analyst with over 9+ years of experience delivering
@@ -682,7 +744,7 @@ footer {
 </section>
 
 <section id="projects" class="projects-section">
-  <h2>Projects</h2>
+  <section id="projects">
 
   <div class="projects-grid">
 
