@@ -14,7 +14,6 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
 font-family:'Poppins',sans-serif;
 color:#0f172a;
@@ -24,7 +23,7 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Modern reveal animation */
+/* Showcase Reveal Animation */
 
 section{
 padding:110px 20px;
@@ -32,7 +31,7 @@ max-width:1200px;
 margin:0 auto;
 scroll-margin-top:120px;
 opacity:0;
-transform:translateY(70px);
+transform:translateY(80px);
 transition:all .9s cubic-bezier(.17,.67,.83,.67);
 }
 
@@ -68,7 +67,6 @@ top:0;
 background:#2563eb;
 z-index:1000;
 box-shadow:0 8px 30px rgba(37,99,235,.25);
-transition:.3s;
 }
 
 .navbar{
@@ -85,7 +83,6 @@ color:#fff;
 text-decoration:none;
 font-size:20px;
 font-weight:600;
-letter-spacing:.5px;
 }
 
 .nav-links{
@@ -102,9 +99,9 @@ transition:.3s;
 position:relative;
 }
 
-.nav-links a.active,
-.nav-links a:hover{
-color:#fff;
+.nav-links a:hover,
+.nav-links a.active{
+color:#ffffff;
 }
 
 .nav-links a.active::after{
@@ -123,6 +120,8 @@ border-radius:4px;
 .hero{
 background:linear-gradient(135deg,#e0e7ff,#f1f5ff);
 padding:170px 20px 160px;
+opacity:1;
+transform:none;
 }
 
 .hero-container{
@@ -375,7 +374,7 @@ text-align:center;
 </nav>
 </header>
 
-<!-- KEEP YOUR FULL ABOUT, SKILLS, PROJECTS, CERTIFICATES, CONTACT SECTIONS EXACTLY AS THEY ARE HERE -->
+<!-- YOUR FULL ABOUT, SKILLS, PROJECTS, CERTIFICATES, CONTACT SECTIONS REMAIN UNCHANGED BELOW THIS LINE -->
 
 <footer>
 © 2026 Mugdha Deodhar | Data Analyst Portfolio
@@ -383,7 +382,7 @@ text-align:center;
 
 <script>
 
-/* Active Nav Highlight */
+/* Active Navigation Highlight */
 
 const sections=document.querySelectorAll("section[id]");
 const navLinks=document.querySelectorAll(".nav-links a");
@@ -407,7 +406,7 @@ link.classList.add("active");
 });
 });
 
-/* Modern Scroll Reveal */
+/* Showcase Scroll Reveal */
 
 const revealSections=document.querySelectorAll("section");
 
