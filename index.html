@@ -70,14 +70,40 @@ box-shadow:0 6px 20px rgba(30,58,138,0.25);
 .hero-text h2{font-size:20px;color:#475569;margin-bottom:30px}
 .hero-text p{font-size:17px;margin-bottom:40px;max-width:550px;color:#475569}
 .hero-buttons{display:flex;gap:16px}
-.btn-primary,.btn-secondary,.btn-outline{padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:.3s}
-.btn-primary{background:#1e40af;color:#fff}
-.btn-primary:hover{background:#162e8c}
-.btn-secondary{background:#1e3a8a;color:#fff;}
-.btn-secondary:hover{background:#1d4ed8;transform:translateY(-2px);}
-.btn-outline{border:2px solid #1e40af;color:#1e40af}
-.btn-outline:hover{background:#1e40af;color:#fff}
-.hero-image img{width:280px;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.btn-primary,
+.btn-secondary,
+.btn-outline{
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s ease;
+}
+
+/* Solid Buttons */
+.btn-primary,
+.btn-secondary{
+background:#1e3a8a;
+color:#ffffff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+background:#1d4ed8;
+transform:translateY(-2px);
+}
+
+/* Outline Button */
+.btn-outline{
+border:2px solid #1e3a8a;
+color:#1e3a8a;
+}
+
+.btn-outline:hover{
+background:#1e3a8a;
+color:#ffffff;
+transform:translateY(-2px);
+}
 
 .about-container{display:flex;gap:60px}
 .about-text{flex:1.2}
