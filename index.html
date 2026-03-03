@@ -88,6 +88,24 @@ box-shadow:0 6px 20px rgba(30,58,138,0.25);
  letter-spacing:.3px;
  font-weight:500;
 }
+
+.mission-line{
+margin-top:18px;
+max-width:560px;
+font-size:15px;
+color:#334155;
+line-height:1.7;
+font-weight:500;
+}
+
+.quick-hire-link{
+display:block;
+margin-top:12px;
+font-size:14px;
+color:#1e3a8a;
+text-decoration:none;
+font-weight:600;
+} 
   
 .btn-primary,
 .btn-secondary,
@@ -151,23 +169,10 @@ box-shadow:0 25px 60px rgba(0,0,0,.12);
 .project-image-wrapper img{width:100%;border-radius:16px;cursor:pointer;transition:.4s}
 .project-image-wrapper img:hover{transform:scale(1.05)}
 .project-description{margin:20px 0;color:#475569}
-.project-impact{
-background:#f5f7ff;
-padding:24px 28px;
-border-left:5px solid #1e3a8a;
-border-radius:12px;
-margin:28px 0 30px 0;
-box-shadow:0 8px 25px rgba(30,58,138,0.08);
-font-size:15px;
-line-height:1.7;
-color:#1e293b;
-}
-
-.project-impact strong{
-color:#1e3a8a;
-font-weight:600;
-letter-spacing:.3px;
-}
+.project-context{margin:20px 0;font-size:14px;color:#475569;line-height:1.7;}
+.project-context strong{color:#1e3a8a;}
+.project-impact{background:#f5f7ff;padding:24px 28px;border-left:5px solid #1e3a8a;border-radius:12px;margin:28px 0 30px 0;box-shadow:0 8px 25px rgba(30,58,138,0.08);font-size:15px;line-height:1.7;color:#1e293b;}
+.project-impact strong{color:#1e3a8a;font-weight:600;letter-spacing:.3px;}
 .project-link{text-decoration:none;color:#1e40af;font-weight:600}
 
 .certificates-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
@@ -177,7 +182,34 @@ letter-spacing:.3px;
 
 .contact-section{background:#f8fafc}
 .contact-buttons{margin-top:30px;display:flex;flex-wrap:wrap;gap:16px}
+.credibility-section{
+background:#f8fafc;
+padding:80px 20px;
+}
 
+.credibility-container{
+max-width:1200px;
+margin:0 auto;
+}
+
+.credibility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.credibility-item{
+background:#ffffff;
+padding:24px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.credibility-item h3{
+color:#1e3a8a;
+margin-bottom:8px;
+font-size:16px;
+}
 footer{
 background:#1e3a8a;
 color:#ffffff;
@@ -234,6 +266,8 @@ font-size:14px;
 <li><a href="#projects">Projects</a></li>
 <li><a href="#certificates">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="https://linkedin.com/in/mugdha-deodhar" target="_blank">LinkedIn</a></li>
+<li><a href="https://github.com/mugdhasdeodhar" target="_blank">GitHub</a></li>  
 </ul>
 </nav>
 </header>
@@ -253,10 +287,16 @@ into clear strategic direction.
 <div class="hero-buttons">
 <a href="#projects" class="btn-primary">Explore Analytics Projects</a>
 <a href="#contact" class="btn-secondary">Discuss Opportunities</a>
+<li><a href="https://linkedin.com/in/mugdha-deodhar" target="_blank">LinkedIn</a></li>
+<li><a href="https://github.com/mugdhasdeodhar" target="_blank">GitHub</a></li>  
 </div>
 
 <p class="availability-line">
 Available for Remote Roles | Open to Relocation | Immediate Interview Availability
+</p>
+
+<p class="mission-line">
+I specialize in turning fragmented operational data into structured performance insights that guide executive-level decisions and measurable improvement.
 </p>
   
 </div>
@@ -273,6 +313,37 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 </div>
 </section>
 
+<section class="credibility-section">
+<div class="credibility-container">
+
+<h2>Professional Recognition & Experience Highlights</h2>
+
+<div class="credibility-grid">
+
+<div class="credibility-item">
+<h3>9+ Years Experience</h3>
+<p>Healthcare & Logistics Analytics Environments</p>
+</div>
+
+<div class="credibility-item">
+<h3>Post Graduate Diploma</h3>
+<p>Supply Chain Management – CDI College</p>
+</div>
+
+<div class="credibility-item">
+<h3>Master's Degree</h3>
+<p>Computer Management</p>
+</div>
+
+<div class="credibility-item">
+<h3>Performance Impact</h3>
+<p>Contributed to 15% Supply Chain Efficiency Improvement</p>
+</div>
+
+</div>
+</div>
+</section>
+  
 <!-- ABOUT -->
 <section id="about">
 <h2>Professional Profile</h2>
@@ -348,6 +419,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <h3>Healthcare Readmissions Analytics Dashboard</h3>
 <div class="project-tags"><span>SQL</span><span>Power BI</span><span>Healthcare Analytics</span></div>
 <p class="project-description">Interactive dashboard analyzing hospital readmission trends, cost drivers, and length of stay metrics to support operational performance optimization.</p>
+<div class="project-context">
+<p><strong>Problem:</strong> Limited visibility into readmission trends and associated cost drivers was restricting proactive intervention planning.</p>
+<p><strong>Approach:</strong> Designed structured SQL queries and built segmented Power BI dashboards analyzing readmissions by diagnosis category, department, and length of stay.</p>
+<p><strong>Outcome:</strong> Enabled executive teams to monitor high-risk segments, improve cost awareness, and support data-driven performance improvement discussions.</p>
+</div>
 <div class="project-impact"><strong>Business Impact:</strong> Improved executive visibility into readmission trends, enabling data-driven cost control discussions and performance monitoring.</div>
 <a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank" class="project-link">View on GitHub →</a>
 </div>
@@ -364,6 +440,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <h3>Logistics On-Time Delivery & Inventory Analytics</h3>
 <div class="project-tags"><span>Power BI</span><span>SQL</span><span>Supply Chain Analytics</span></div>
 <p class="project-description">Operational analytics dashboard evaluating shipment performance, on-time delivery metrics, and inventory risk exposure to improve supply chain visibility and efficiency.</p>
+<div class="project-context">
+<p><strong>Problem:</strong> Inconsistent shipment tracking and inventory risk exposure were impacting on-time delivery performance.</p>
+<p><strong>Approach:</strong> Built KPI-driven dashboards integrating SQL data extraction with Power BI visualizations to monitor delivery timelines, bottlenecks, and inventory risk trends.</p>
+<p><strong>Outcome:</strong> Supported structured KPI monitoring and contributed to a 15% improvement in supply chain performance efficiency.</p>
+</div>
 <div class="project-impact"><strong>Business Impact:</strong> Identified delivery bottlenecks and inventory risk trends, enabling structured KPI monitoring and contributing to a 15% improvement in supply chain performance.</div>
 <a href="https://github.com/mugdhasdeodhar/Logistics_On-Time-Delivery-Inventory_PowerBI" target="_blank" class="project-link">View on GitHub →</a>
 </div>
@@ -377,6 +458,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <h3>Python Healthcare Data Cleaning Framework</h3>
 <div class="project-tags"><span>Python</span><span>Pandas</span><span>Data Cleaning</span></div>
 <p class="project-description">Structured data validation and cleaning framework addressing missing values, inconsistent formats, and anomalies in healthcare datasets to improve downstream analytics reliability.</p>
+<div class="project-context">
+<p><strong>Problem:</strong> Inconsistent data formatting and missing values were reducing reliability of downstream healthcare analytics reporting.</p>
+<p><strong>Approach:</strong> Developed a structured Python-based validation and cleaning framework using Pandas to standardize formats, detect anomalies, and improve dataset integrity.</p>
+<p><strong>Outcome:</strong> Improved reporting accuracy and strengthened confidence in executive dashboards relying on cleaned healthcare datasets.</p>
+</div>
 <div class="project-impact"><strong>Business Impact:</strong> Improved data accuracy and reporting consistency, strengthening confidence in performance dashboards and executive decision-making outputs.</div>
 <a href="https://github.com/mugdhasdeodhar/python-healthcare-data-cleaning" target="_blank" class="project-link">View on GitHub →</a>
 </div>
