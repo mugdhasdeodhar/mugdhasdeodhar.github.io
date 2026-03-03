@@ -12,7 +12,22 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Poppins',sans-serif;color:#1e293b;background:#fff;padding-top:90px;line-height:1.6}
-section{padding:110px 20px;max-width:1200px;margin:0 auto;scroll-margin-top:120px}
+
+section{
+padding:110px 20px;
+max-width:1200px;
+margin:0 auto;
+scroll-margin-top:120px;
+opacity:0;
+transform:translateY(60px);
+transition:all .8s cubic-bezier(.16,.8,.32,1);
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
 h2{font-size:38px;font-weight:700;margin-bottom:60px;position:relative}
 h2::after{content:"";width:70px;height:3px;background:#1e40af;position:absolute;bottom:-12px;left:0}
 
@@ -289,6 +304,22 @@ link.classList.add("active");
 }
 });
 });
+
+/* Scroll Reveal */
+const revealSections = document.querySelectorAll("section");
+
+const revealOnScroll = () => {
+revealSections.forEach(section => {
+const sectionTop = section.getBoundingClientRect().top;
+if(sectionTop < window.innerHeight - 120){
+section.classList.add("visible");
+}
+});
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+   
 </script> 
   
 </body>
