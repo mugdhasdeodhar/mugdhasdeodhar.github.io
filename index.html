@@ -76,8 +76,33 @@ box-shadow:0 6px 20px rgba(30,58,138,0.25);
 .nav-links{list-style:none;display:flex;gap:28px}
 .nav-links a{color:#fff;text-decoration:none;font-size:15px;transition:.3s}
 
-.hero{background:#f4f6fb;padding:150px 20px 140px}
-.hero-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:80px}
+.hero{
+background:linear-gradient(180deg,#f4f6fb 0%,#ffffff 100%);
+padding:150px 20px 140px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:-120px;
+right:-120px;
+width:380px;
+height:380px;
+background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);
+z-index:0;
+}
+  
+.hero-container{
+max-width:1200px;
+margin:0 auto;
+display:flex;
+align-items:center;
+gap:80px;
+position:relative;
+z-index:1;
+}
 .hero-text h1{font-size:54px;font-weight:700;margin-bottom:20px}
 .hero-text h2{font-size:20px;color:#475569;margin-bottom:30px}
 .hero-text p{font-size:17px;margin-bottom:40px;max-width:560px;color:#475569}
@@ -90,6 +115,24 @@ box-shadow:0 6px 20px rgba(30,58,138,0.25);
  font-weight:500;
 }
 
+.hero-metrics{
+display:flex;
+gap:28px;
+flex-wrap:wrap;
+margin-top:22px;
+font-size:14px;
+color:#475569;
+font-weight:500;
+}
+
+.hero-metrics span{
+background:#eef2ff;
+color:#1e3a8a;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+}
+  
 .mission-line{
 margin-top:18px;
 max-width:560px;
@@ -164,7 +207,20 @@ box-shadow:0 25px 60px rgba(0,0,0,.12);
   
 .projects-section{background:#f8fafc}
 .projects-grid{display:flex;flex-direction:column;gap:60px}
-.project-card{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;background:#fff;padding:60px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.06)}
+.project-card{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:60px;
+background:#fff;
+padding:60px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,.06);
+transition:transform .35s ease, box-shadow .35s ease;
+}
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 28px 80px rgba(0,0,0,.12);
+}
 .project-reverse{direction:rtl}
 .project-reverse>*{direction:ltr}
 .project-image-wrapper img{
@@ -328,14 +384,21 @@ measurable improvement.
 <div class="hero-buttons">
 <a href="#projects" class="btn-primary">Explore Analytics Projects</a>
 <a href="#contact" class="btn-secondary">Let’s Connect</a>
-<li><a href="https://linkedin.com/in/mugdha-deodhar" target="_blank">LinkedIn</a></li>
-<li><a href="https://github.com/mugdhasdeodhar" target="_blank">GitHub</a></li>  
+<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" class="btn-outline">LinkedIn</a>
+<a href="https://github.com/mugdhasdeodhar" target="_blank" class="btn-outline">GitHub</a>
 </div>
 
 <p class="availability-line">
 Available for Remote Roles | Open to Relocation | Immediate Interview Availability
 </p>
 
+<div class="hero-metrics">
+<span>9+ Years Analytics Experience</span>
+<span>Healthcare Analytics</span>
+<span>Supply Chain Analytics</span>
+<span>KPI Dashboard Development</span>
+</div>
+  
 </div>
   
 <div class="hero-image">
