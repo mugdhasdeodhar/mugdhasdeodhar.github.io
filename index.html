@@ -166,9 +166,17 @@ box-shadow:0 25px 60px rgba(0,0,0,.12);
 .project-card{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;background:#fff;padding:60px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.06)}
 .project-reverse{direction:rtl}
 .project-reverse>*{direction:ltr}
-.project-image-wrapper img{width:100%;border-radius:16px;cursor:pointer;transition:.4s}
-.project-image-wrapper img:hover{transform:scale(1.05)}
-.project-image-wrapper img{cursor:pointer;}
+.project-image-wrapper img{
+width:100%;
+border-radius:16px;
+cursor:zoom-in;
+transition:transform .3s ease;
+}
+
+.project-image-wrapper img:hover{
+transform:scale(1.06);
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
 .project-description{margin:20px 0;color:#475569}
 .project-context{margin:20px 0;font-size:14px;color:#475569;line-height:1.7;}
 .project-context strong{color:#1e3a8a;}
@@ -223,6 +231,40 @@ font-size:14px;
 .hero-container,.about-container,.project-card{flex-direction:column;grid-template-columns:1fr;text-align:center}
 .project-reverse{direction:ltr}
 }
+
+/* LIGHTBOX IMAGE VIEWER */
+
+.lightbox{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+animation:zoomIn .25s ease;
+}
+
+@keyframes zoomIn{
+from{transform:scale(.9);opacity:.6}
+to{transform:scale(1);opacity:1}
+}
+
+.project-image-wrapper img{
+cursor:zoom-in;
+}
+
 </style>
   <script type="application/ld+json">
 {
@@ -408,12 +450,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 
 <div class="project-card">
 <div class="project-image-wrapper">
-<a href="Healthcare-Project-Preview.jpg" target="_blank">
 <img src="Healthcare-Project-Preview.jpg"
-     alt="Healthcare Dashboard Preview"
+     alt="Healthcare Re-admissions Analytics Dashboard"
      loading="lazy"
-     decoding="async">
-</a>
+     decoding="async"
+     class="clickable-image">
 </div>
 <div>
 <h3>Healthcare Re-admissions Analytics Dashboard</h3>
@@ -435,12 +476,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 
 <div class="project-card project-reverse">
 <div class="project-image-wrapper">
-<a href="Logistics-Project-Preview.jpg" target="_blank">
 <img src="Logistics-Project-Preview.jpg"
-     alt="Logistics Dashboard Preview"
+     alt="Logistics On-Time Delivery Dashboard"
      loading="lazy"
-     decoding="async">
-</a>
+     decoding="async"
+     class="clickable-image">
 </div>
 <div>
 <h3>Logistics On-Time Delivery & Inventory Analytics</h3>
@@ -462,12 +502,11 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 
 <div class="project-card">
 <div class="project-image-wrapper">
-<a href="project1-preview.jpg" target="_blank">
-<img src="project1-preview.jpg"
+<img src="Python_Healthcare_Data_Cleaning_Project.jpg"
      alt="Python Healthcare Data Cleaning Framework"
      loading="lazy"
-     decoding="async">
-</a>
+     decoding="async"
+     class="clickable-image">
 </div>
 <div>
 <h3>Python Healthcare Data Cleaning Framework</h3>
@@ -558,8 +597,36 @@ section.classList.add("visible");
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+/* LIGHTBOX SCRIPT */
+
+const images = document.querySelectorAll(".clickable-image");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none";
+});
+
+document.addEventListener("keydown",(e)=>{
+if(e.key==="Escape"){
+lightbox.style.display="none";
+}
+});
    
 </script> 
   
+<div id="lightbox" class="lightbox">
+<img id="lightbox-img" src="" alt="Expanded project preview">
+</div>
+
+
 </body>
 </html>
