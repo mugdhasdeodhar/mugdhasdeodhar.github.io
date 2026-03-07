@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://mugdhasdeodhar.github.io/Mugdha_Profile.jpg">
 <meta property="og:site_name" content="Mugdha Deodhar Portfolio">  
 
-<link rel="preload" as="image" href="Mugdha_Profile.jpg">
+<link rel="preload" as="image" href="Mugdha_Profile.jpg" fetchpriority="high">
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,8 @@ header{
 position:fixed;
 width:100%;
 top:0;
-background:#1e3a8a;
+background:rgba(30,58,138,0.92);
+backdrop-filter:blur(6px);
 z-index:1000;
 box-shadow:0 6px 20px rgba(30,58,138,0.25);
 }
@@ -240,7 +241,7 @@ box-shadow:0 15px 40px rgba(0,0,0,0.12);
 .project-impact{background:#f5f7ff;padding:24px 28px;border-left:5px solid #1e3a8a;border-radius:12px;margin:28px 0 30px 0;box-shadow:0 8px 25px rgba(30,58,138,0.08);font-size:15px;line-height:1.7;color:#1e293b;}
 .project-impact strong{color:#1e3a8a;font-weight:600;letter-spacing:.3px;}
 .project-link{text-decoration:none;color:#1e40af;font-weight:600}
-
+.project-link:hover{text-decoration:underline;color:#1d4ed8;}
 .certificates-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
 .certificate-card{text-align:center}
 .certificate-card img{width:100%;border-radius:12px;margin-bottom:10px;transition:.3s}
@@ -362,8 +363,8 @@ to{transform:scale(1);opacity:1}
 <li><a href="#projects">Projects</a></li>
 <li><a href="#certificates">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a href="https://linkedin.com/in/mugdha-deodhar" target="_blank">LinkedIn</a></li>
-<li><a href="https://github.com/mugdhasdeodhar" target="_blank">GitHub</a></li>  
+<li><a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" rel="noopener">LinkedIn</a></li>
+<li><a href="https://github.com/mugdhasdeodhar" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 </nav>
 </header>
@@ -384,8 +385,8 @@ measurable improvement.
 <div class="hero-buttons">
 <a href="#projects" class="btn-primary">Explore Analytics Projects</a>
 <a href="#contact" class="btn-secondary">Let’s Connect</a>
-<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" class="btn-outline">LinkedIn</a>
-<a href="https://github.com/mugdhasdeodhar" target="_blank" class="btn-outline">GitHub</a>
+<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+<a href="https://github.com/mugdhasdeodhar" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
 </div>
 
 <p class="availability-line">
@@ -406,6 +407,7 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
      alt="Mugdha Deodhar"
      width="300"
      height="300"
+     decoding="async"
      fetchpriority="high"
      class="profile-img">
 </div>
@@ -512,6 +514,8 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <div class="project-image-wrapper">
 <img src="Healthcare-Project-Preview.jpg"
      alt="Power BI dashboard showing Healthcare Re-admissions Analytics"
+     width="900"
+     height="520"
      loading="lazy"
      decoding="async"
      class="clickable-image">
@@ -530,7 +534,7 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <div class="project-impact">
 <strong>Business Impact:</strong> Enhanced executive decision support by improving visibility into cost drivers and enabling structured performance discussions.
 </div>
-<a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank" class="project-link">View on GitHub →</a>
+<a href="https://github.com/mugdhasdeodhar/healthcare-readmissions-powerbi" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
 </div>
 </div>
 
@@ -538,6 +542,8 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <div class="project-image-wrapper">
 <img src="Logistics-Project-Preview.jpg"
      alt="Logistics On-Time Delivery Dashboard"
+     width="900"
+     height="520"
      loading="lazy"
      decoding="async"
      class="clickable-image">
@@ -564,6 +570,8 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <div class="project-image-wrapper">
 <img src="Python_Healthcare_Data_Cleaning_Project.jpg"
      alt="Python Healthcare Data Cleaning Framework"
+     width="900"
+     height="520"
      loading="lazy"
      decoding="async"
      class="clickable-image">
@@ -609,11 +617,17 @@ Available for Remote Roles | Open to Relocation | Immediate Interview Availabili
 <p>I am currently open to remote Data Analyst opportunities, particularly in healthcare and supply chain analytics.</p>
 <p>My long-term goal is to contribute to organizations where data strategy directly influences operational excellence and measurable performance improvement.</p>
 <div class="contact-buttons">
-<a href="Mugdha_Deodhar_Data_Analyst_Resume_2026.pdf" target="_blank" class="btn-primary">Download Resume (PDF)</a>
+
+<a href="Mugdha_Deodhar_Data_Analyst_Resume_2026.pdf" target="_blank" rel="noopener" class="btn-primary">Download Resume (PDF)</a>
 <a href="mailto:mugdhasdeodhar@gmail.com" class="btn-secondary">Schedule a Conversation</a>
-<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" class="btn-outline">LinkedIn</a>
-<a href="https://github.com/mugdhasdeodhar" target="_blank" class="btn-outline">GitHub</a>
+<a href="https://linkedin.com/in/mugdha-deodhar" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+<a href="https://github.com/mugdhasdeodhar" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
 </div>
+
+<p style="margin-top:16px;font-size:14px;color:#475569;">
+Direct email: <strong>mugdhasdeodhar@gmail.com</strong>
+</p>
+  
 </section>
 
 <footer>
